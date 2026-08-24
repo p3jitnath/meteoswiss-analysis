@@ -1,7 +1,7 @@
 # Swiss summer temperatures, 1864–today
 
 [![CI](https://github.com/p3jitnath/meteoswiss-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/p3jitnath/meteoswiss-analysis/actions/workflows/ci.yml)
-[![Deploy](https://github.com/p3jitnath/meteoswiss-analysis/actions/workflows/pages.yml/badge.svg)](https://github.com/p3jitnath/meteoswiss-analysis/actions/workflows/pages.yml)
+[![Deploy Pages](https://github.com/p3jitnath/meteoswiss-analysis/actions/workflows/pages.yml/badge.svg)](https://github.com/p3jitnath/meteoswiss-analysis/actions/workflows/pages.yml)
 
 A reproducible update of Christoph Schär's visual comparison of historical and recent
 Swiss warm-season temperatures. The project uses homogeneous MeteoSwiss 2m air-temperature
