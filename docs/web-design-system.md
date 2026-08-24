@@ -20,7 +20,9 @@ characters. Press `G` outside a text field to toggle the exact production grid o
 
 ## Typography and colour
 
-- Family: Arial with Helvetica Neue and system sans-serif fallbacks.
+- Family: Helvetica and Arial, with bundled Inter 4.1 as the final named
+  fallback. The same ordered stack is embedded in the Open Graph source. Inter is distributed
+  under the SIL Open Font License 1.1 included with the web assets.
 - Weights: regular and bold only.
 - Semantic type tokens: 16/13 px identity title/detail, 15 px primary navigation,
   14 px metadata, 16 px section
