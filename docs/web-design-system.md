@@ -57,7 +57,8 @@ controls meet a 44 px touch target.
 Semantic landmarks and heading order are preserved. Focus is visible, charts have accessible
 names, colour is paired with position and labels, and reduced-motion preferences are honoured.
 The site uses no photographic assets. The GitHub mark is an inline vector derived from GitHub's
-public mark and links directly to the source repository. The simplified Swiss outline is derived
-from the Natural Earth public-domain geometry distributed by `datasets/geo-countries`; station
-locations use city coordinates for Basel, Bern, Geneva and Zürich. Code is MIT licensed;
-observations are attributed to MeteoSwiss.
+public mark and links directly to the source repository. The high-resolution Swiss outline is
+derived from [swisstopo's swissBOUNDARIES3D 2026 national perimeter](https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d),
+simplified to 500 m with topology preservation for efficient browser rendering. Station locations use projected city
+coordinates for Basel, Bern, Geneva and Zürich. Code is MIT licensed; observations are
+attributed to MeteoSwiss.
