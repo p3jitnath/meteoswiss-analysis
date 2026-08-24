@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this analysis, please cite the software, Schär et al. (2004), and MeteoSwiss."
+title: "Swiss summer temperature analysis"
+type: software
+authors:
+  - family-names: Nath
+    given-names: Pritthijit
+version: 0.1.0
+date-released: 2026-08-24
+license: MIT
+repository-code: "https://github.com/p3jitnath/meteoswiss-analysis"

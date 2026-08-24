@@ -1,0 +1,72 @@
+{
+  "retrieved_at": "2026-08-24T16:05:30.521503+00:00",
+  "collection": "https://data.geo.admin.ch/api/stac/v1/collections/ch.meteoschweiz.ogd-nbcn",
+  "licence_note": "Source: MeteoSwiss",
+  "assets": [
+    {
+      "station": "bas",
+      "file": "ogd-nbcn_bas_m.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/bas/ogd-nbcn_bas_m.csv"
+    },
+    {
+      "station": "bas",
+      "file": "ogd-nbcn_bas_d_historical.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/bas/ogd-nbcn_bas_d_historical.csv"
+    },
+    {
+      "station": "bas",
+      "file": "ogd-nbcn_bas_d_recent.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/bas/ogd-nbcn_bas_d_recent.csv"
+    },
+    {
+      "station": "ber",
+      "file": "ogd-nbcn_ber_m.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/ber/ogd-nbcn_ber_m.csv"
+    },
+    {
+      "station": "ber",
+      "file": "ogd-nbcn_ber_d_historical.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/ber/ogd-nbcn_ber_d_historical.csv"
+    },
+    {
+      "station": "ber",
+      "file": "ogd-nbcn_ber_d_recent.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/ber/ogd-nbcn_ber_d_recent.csv"
+    },
+    {
+      "station": "gve",
+      "file": "ogd-nbcn_gve_m.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/gve/ogd-nbcn_gve_m.csv"
+    },
+    {
+      "station": "gve",
+      "file": "ogd-nbcn_gve_d_historical.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/gve/ogd-nbcn_gve_d_historical.csv"
+    },
+    {
+      "station": "gve",
+      "file": "ogd-nbcn_gve_d_recent.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/gve/ogd-nbcn_gve_d_recent.csv"
+    },
+    {
+      "station": "sma",
+      "file": "ogd-nbcn_sma_m.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/sma/ogd-nbcn_sma_m.csv"
+    },
+    {
+      "station": "sma",
+      "file": "ogd-nbcn_sma_d_historical.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/sma/ogd-nbcn_sma_d_historical.csv"
+    },
+    {
+      "station": "sma",
+      "file": "ogd-nbcn_sma_d_recent.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/sma/ogd-nbcn_sma_d_recent.csv"
+    },
+    {
+      "station": "metadata",
+      "file": "ogd-nbcn_meta_stations.csv",
+      "url": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-nbcn/ogd-nbcn_meta_stations.csv"
+    }
+  ]
+}

@@ -1,0 +1,3318 @@
+{
+  "metadata": {
+    "source": "MeteoSwiss",
+    "stations": [
+      "Basel / Binningen",
+      "Bern / Zollikofen",
+      "Geneva / Cointrin",
+      "Zürich / Fluntern"
+    ],
+    "method": "Equal mean of four homogeneous station series; 1961–1990 baseline"
+  },
+  "seasons": {
+    "jja": {
+      "summary": {
+        "season": "jja",
+        "season_label": "June–August (JJA)",
+        "baseline_start": 1961,
+        "baseline_end": 1990,
+        "baseline_temperature_c": 17.11,
+        "historical_period_start": 1864,
+        "historical_mean_anomaly_c": -0.126,
+        "historical_std_c": 0.89,
+        "recent_period_start": 1991,
+        "recent_period_end": 2025,
+        "recent_mean_anomaly_c": 1.923,
+        "recent_std_c": 1.134,
+        "mean_shift_c": 2.048,
+        "warmest_year": 2003,
+        "warmest_anomaly_c": 5.034,
+        "as_of": "2026-08-24"
+      },
+      "records": [
+        {
+          "year": 1864,
+          "temperature_c": 16.198097826086954,
+          "anomaly_c": -0.9121286231884085,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 137
+        },
+        {
+          "year": 1865,
+          "temperature_c": 17.26739130434783,
+          "anomaly_c": 0.15716485507246603,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 79
+        },
+        {
+          "year": 1866,
+          "temperature_c": 16.807608695652174,
+          "anomaly_c": -0.30261775362318843,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 105
+        },
+        {
+          "year": 1867,
+          "temperature_c": 16.81847826086957,
+          "anomaly_c": -0.2917481884057942,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 104
+        },
+        {
+          "year": 1868,
+          "temperature_c": 17.888315217391302,
+          "anomaly_c": 0.7780887681159392,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 48
+        },
+        {
+          "year": 1869,
+          "temperature_c": 16.563315217391306,
+          "anomaly_c": -0.5469112318840565,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 121
+        },
+        {
+          "year": 1870,
+          "temperature_c": 17.652717391304346,
+          "anomaly_c": 0.5424909420289836,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 61
+        },
+        {
+          "year": 1871,
+          "temperature_c": 16.4875,
+          "anomaly_c": -0.6227264492753619,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 125
+        },
+        {
+          "year": 1872,
+          "temperature_c": 16.88016304347826,
+          "anomaly_c": -0.23006340579710383,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 100
+        },
+        {
+          "year": 1873,
+          "temperature_c": 18.40570652173913,
+          "anomaly_c": 1.2954800724637678,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 31
+        },
+        {
+          "year": 1874,
+          "temperature_c": 17.610054347826086,
+          "anomaly_c": 0.4998278985507234,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 63
+        },
+        {
+          "year": 1875,
+          "temperature_c": 17.321195652173913,
+          "anomaly_c": 0.21096920289854992,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 78
+        },
+        {
+          "year": 1876,
+          "temperature_c": 17.6875,
+          "anomaly_c": 0.5772735507246374,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 60
+        },
+        {
+          "year": 1877,
+          "temperature_c": 18.10108695652174,
+          "anomaly_c": 0.9908605072463779,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 39
+        },
+        {
+          "year": 1878,
+          "temperature_c": 16.553532608695654,
+          "anomaly_c": -0.5566938405797082,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 123
+        },
+        {
+          "year": 1879,
+          "temperature_c": 16.64538043478261,
+          "anomaly_c": -0.4648460144927533,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 117
+        },
+        {
+          "year": 1880,
+          "temperature_c": 16.539402173913043,
+          "anomaly_c": -0.5708242753623196,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 124
+        },
+        {
+          "year": 1881,
+          "temperature_c": 17.95054347826087,
+          "anomaly_c": 0.8403170289855062,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 45
+        },
+        {
+          "year": 1882,
+          "temperature_c": 15.422282608695653,
+          "anomaly_c": -1.6879438405797096,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 160
+        },
+        {
+          "year": 1883,
+          "temperature_c": 15.916576086956523,
+          "anomaly_c": -1.1936503623188397,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 148
+        },
+        {
+          "year": 1884,
+          "temperature_c": 16.48559782608696,
+          "anomaly_c": -0.6246286231884035,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 126
+        },
+        {
+          "year": 1885,
+          "temperature_c": 17.61086956521739,
+          "anomaly_c": 0.5006431159420259,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 62
+        },
+        {
+          "year": 1886,
+          "temperature_c": 16.465760869565216,
+          "anomaly_c": -0.6444655797101468,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 127
+        },
+        {
+          "year": 1887,
+          "temperature_c": 17.866304347826087,
+          "anomaly_c": 0.7560778985507248,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 52
+        },
+        {
+          "year": 1888,
+          "temperature_c": 15.670108695652175,
+          "anomaly_c": -1.4401177536231877,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 155
+        },
+        {
+          "year": 1889,
+          "temperature_c": 16.66304347826087,
+          "anomaly_c": -0.44718297101449167,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 115
+        },
+        {
+          "year": 1890,
+          "temperature_c": 15.775,
+          "anomaly_c": -1.3352264492753623,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 153
+        },
+        {
+          "year": 1891,
+          "temperature_c": 15.977989130434782,
+          "anomaly_c": -1.1322373188405805,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 146
+        },
+        {
+          "year": 1892,
+          "temperature_c": 17.184510869565216,
+          "anomaly_c": 0.07428442028985316,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 84
+        },
+        {
+          "year": 1893,
+          "temperature_c": 17.603804347826088,
+          "anomaly_c": 0.49357789855072554,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 64
+        },
+        {
+          "year": 1894,
+          "temperature_c": 16.598097826086956,
+          "anomaly_c": -0.5121286231884064,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 119
+        },
+        {
+          "year": 1895,
+          "temperature_c": 17.145108695652173,
+          "anomaly_c": 0.034882246376810144,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 87
+        },
+        {
+          "year": 1896,
+          "temperature_c": 16.04375,
+          "anomaly_c": -1.0664764492753633,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 142
+        },
+        {
+          "year": 1897,
+          "temperature_c": 17.698641304347827,
+          "anomaly_c": 0.5884148550724646,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 59
+        },
+        {
+          "year": 1898,
+          "temperature_c": 16.629347826086956,
+          "anomaly_c": -0.48087862318840635,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 118
+        },
+        {
+          "year": 1899,
+          "temperature_c": 17.374728260869563,
+          "anomaly_c": 0.26450181159420083,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 76
+        },
+        {
+          "year": 1900,
+          "temperature_c": 17.398097826086957,
+          "anomaly_c": 0.28787137681159436,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 74
+        },
+        {
+          "year": 1901,
+          "temperature_c": 16.90570652173913,
+          "anomaly_c": -0.20451992753623216,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 98
+        },
+        {
+          "year": 1902,
+          "temperature_c": 16.449728260869566,
+          "anomaly_c": -0.6604981884057963,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 128
+        },
+        {
+          "year": 1903,
+          "temperature_c": 15.799728260869562,
+          "anomaly_c": -1.3104981884058002,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 152
+        },
+        {
+          "year": 1904,
+          "temperature_c": 18.47038043478261,
+          "anomaly_c": 1.360153985507246,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 29
+        },
+        {
+          "year": 1905,
+          "temperature_c": 17.998641304347824,
+          "anomaly_c": 0.8884148550724618,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 43
+        },
+        {
+          "year": 1906,
+          "temperature_c": 17.179891304347827,
+          "anomaly_c": 0.0696648550724639,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 85
+        },
+        {
+          "year": 1907,
+          "temperature_c": 16.193206521739132,
+          "anomaly_c": -0.9170199275362307,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 138
+        },
+        {
+          "year": 1908,
+          "temperature_c": 16.824184782608697,
+          "anomaly_c": -0.28604166666666586,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 103
+        },
+        {
+          "year": 1909,
+          "temperature_c": 15.313858695652174,
+          "anomaly_c": -1.7963677536231888,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 162
+        },
+        {
+          "year": 1910,
+          "temperature_c": 15.951086956521738,
+          "anomaly_c": -1.1591394927536243,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 147
+        },
+        {
+          "year": 1911,
+          "temperature_c": 18.872010869565216,
+          "anomaly_c": 1.7617844202898532,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 21
+        },
+        {
+          "year": 1912,
+          "temperature_c": 15.456249999999999,
+          "anomaly_c": -1.6539764492753637,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 158
+        },
+        {
+          "year": 1913,
+          "temperature_c": 15.349999999999998,
+          "anomaly_c": -1.7602264492753648,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 161
+        },
+        {
+          "year": 1914,
+          "temperature_c": 15.73913043478261,
+          "anomaly_c": -1.3710960144927533,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 154
+        },
+        {
+          "year": 1915,
+          "temperature_c": 16.698913043478264,
+          "anomaly_c": -0.41131340579709885,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 113
+        },
+        {
+          "year": 1916,
+          "temperature_c": 15.481521739130434,
+          "anomaly_c": -1.6287047101449286,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 157
+        },
+        {
+          "year": 1917,
+          "temperature_c": 17.11711956521739,
+          "anomaly_c": 0.00689311594202735,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 88
+        },
+        {
+          "year": 1918,
+          "temperature_c": 16.04211956521739,
+          "anomaly_c": -1.068106884057972,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 143
+        },
+        {
+          "year": 1919,
+          "temperature_c": 16.645652173913046,
+          "anomaly_c": -0.46457427536231677,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 116
+        },
+        {
+          "year": 1920,
+          "temperature_c": 16.172554347826086,
+          "anomaly_c": -0.9376721014492766,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 139
+        },
+        {
+          "year": 1921,
+          "temperature_c": 17.991847826086957,
+          "anomaly_c": 0.8816213768115944,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 44
+        },
+        {
+          "year": 1922,
+          "temperature_c": 16.324184782608693,
+          "anomaly_c": -0.7860416666666694,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 132
+        },
+        {
+          "year": 1923,
+          "temperature_c": 16.86413043478261,
+          "anomaly_c": -0.2460960144927533,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 102
+        },
+        {
+          "year": 1924,
+          "temperature_c": 15.66820652173913,
+          "anomaly_c": -1.4420199275362329,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 156
+        },
+        {
+          "year": 1925,
+          "temperature_c": 16.71820652173913,
+          "anomaly_c": -0.39201992753623216,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 111
+        },
+        {
+          "year": 1926,
+          "temperature_c": 15.901358695652176,
+          "anomaly_c": -1.2088677536231867,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 149
+        },
+        {
+          "year": 1927,
+          "temperature_c": 16.558695652173913,
+          "anomaly_c": -0.5515307971014494,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 122
+        },
+        {
+          "year": 1928,
+          "temperature_c": 18.62690217391304,
+          "anomaly_c": 1.516675724637679,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 24
+        },
+        {
+          "year": 1929,
+          "temperature_c": 17.525543478260868,
+          "anomaly_c": 0.4153170289855055,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 69
+        },
+        {
+          "year": 1930,
+          "temperature_c": 17.22038043478261,
+          "anomaly_c": 0.11015398550724598,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 80
+        },
+        {
+          "year": 1931,
+          "temperature_c": 16.701630434782608,
+          "anomaly_c": -0.40859601449275473,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 112
+        },
+        {
+          "year": 1932,
+          "temperature_c": 17.02228260869565,
+          "anomaly_c": -0.08794384057971172,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 92
+        },
+        {
+          "year": 1933,
+          "temperature_c": 17.01304347826087,
+          "anomaly_c": -0.0971829710144938,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 93
+        },
+        {
+          "year": 1934,
+          "temperature_c": 17.174184782608695,
+          "anomaly_c": 0.06395833333333201,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 86
+        },
+        {
+          "year": 1935,
+          "temperature_c": 17.884239130434782,
+          "anomaly_c": 0.7740126811594195,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 49
+        },
+        {
+          "year": 1936,
+          "temperature_c": 16.283152173913045,
+          "anomaly_c": -0.8270742753623175,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 133
+        },
+        {
+          "year": 1937,
+          "temperature_c": 17.582608695652173,
+          "anomaly_c": 0.47238224637681014,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 67
+        },
+        {
+          "year": 1938,
+          "temperature_c": 16.974728260869565,
+          "anomaly_c": -0.13549818840579775,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 95
+        },
+        {
+          "year": 1939,
+          "temperature_c": 16.589402173913044,
+          "anomaly_c": -0.5208242753623189,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 120
+        },
+        {
+          "year": 1940,
+          "temperature_c": 15.878804347826089,
+          "anomaly_c": -1.231422101449274,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 150
+        },
+        {
+          "year": 1941,
+          "temperature_c": 17.04891304347826,
+          "anomaly_c": -0.061313405797100984,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 90
+        },
+        {
+          "year": 1942,
+          "temperature_c": 17.20978260869565,
+          "anomaly_c": 0.09955615942028828,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 83
+        },
+        {
+          "year": 1943,
+          "temperature_c": 17.53451086956522,
+          "anomaly_c": 0.42428442028985813,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 68
+        },
+        {
+          "year": 1944,
+          "temperature_c": 17.854891304347827,
+          "anomaly_c": 0.7446648550724646,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 55
+        },
+        {
+          "year": 1945,
+          "temperature_c": 18.298369565217392,
+          "anomaly_c": 1.1881431159420295,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 33
+        },
+        {
+          "year": 1946,
+          "temperature_c": 16.994021739130435,
+          "anomaly_c": -0.1162047101449275,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 94
+        },
+        {
+          "year": 1947,
+          "temperature_c": 19.77282608695652,
+          "anomaly_c": 2.662599637681158,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 10
+        },
+        {
+          "year": 1948,
+          "temperature_c": 15.98913043478261,
+          "anomaly_c": -1.1210960144927533,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 145
+        },
+        {
+          "year": 1949,
+          "temperature_c": 18.43125,
+          "anomaly_c": 1.321023550724636,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 30
+        },
+        {
+          "year": 1950,
+          "temperature_c": 19.10353260869565,
+          "anomaly_c": 1.993306159420289,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 15
+        },
+        {
+          "year": 1951,
+          "temperature_c": 16.92228260869565,
+          "anomaly_c": -0.18794384057971314,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 97
+        },
+        {
+          "year": 1952,
+          "temperature_c": 19.157608695652176,
+          "anomaly_c": 2.047382246376813,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 14
+        },
+        {
+          "year": 1953,
+          "temperature_c": 16.946467391304346,
+          "anomaly_c": -0.16375905797101709,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 96
+        },
+        {
+          "year": 1954,
+          "temperature_c": 16.15516304347826,
+          "anomaly_c": -0.9550634057971017,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 140
+        },
+        {
+          "year": 1955,
+          "temperature_c": 16.792934782608693,
+          "anomaly_c": -0.3172916666666694,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 106
+        },
+        {
+          "year": 1956,
+          "temperature_c": 15.424184782608696,
+          "anomaly_c": -1.6860416666666662,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 159
+        },
+        {
+          "year": 1957,
+          "temperature_c": 16.730163043478257,
+          "anomaly_c": -0.38006340579710596,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 110
+        },
+        {
+          "year": 1958,
+          "temperature_c": 17.02798913043478,
+          "anomaly_c": -0.08223731884058338,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 91
+        },
+        {
+          "year": 1959,
+          "temperature_c": 17.848369565217393,
+          "anomaly_c": 0.7381431159420302,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 56
+        },
+        {
+          "year": 1960,
+          "temperature_c": 16.43505434782609,
+          "anomaly_c": -0.6751721014492738,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 129
+        },
+        {
+          "year": 1961,
+          "temperature_c": 16.685326086956525,
+          "anomaly_c": -0.4249003623188372,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 114
+        },
+        {
+          "year": 1962,
+          "temperature_c": 17.219021739130437,
+          "anomaly_c": 0.10879528985507392,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 81
+        },
+        {
+          "year": 1963,
+          "temperature_c": 16.779347826086955,
+          "anomaly_c": -0.33087862318840777,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 107
+        },
+        {
+          "year": 1964,
+          "temperature_c": 18.009239130434782,
+          "anomaly_c": 0.8990126811594195,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 41
+        },
+        {
+          "year": 1965,
+          "temperature_c": 16.214945652173913,
+          "anomaly_c": -0.8952807971014494,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 136
+        },
+        {
+          "year": 1966,
+          "temperature_c": 16.416304347826088,
+          "anomaly_c": -0.6939221014492745,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 130
+        },
+        {
+          "year": 1967,
+          "temperature_c": 17.32445652173913,
+          "anomaly_c": 0.21423007246376713,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 77
+        },
+        {
+          "year": 1968,
+          "temperature_c": 16.238043478260867,
+          "anomaly_c": -0.8721829710144959,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 135
+        },
+        {
+          "year": 1969,
+          "temperature_c": 16.41141304347826,
+          "anomaly_c": -0.6988134057971038,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 131
+        },
+        {
+          "year": 1970,
+          "temperature_c": 17.495108695652174,
+          "anomaly_c": 0.38488224637681157,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 71
+        },
+        {
+          "year": 1971,
+          "temperature_c": 17.44945652173913,
+          "anomaly_c": 0.33923007246376713,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 73
+        },
+        {
+          "year": 1972,
+          "temperature_c": 16.133695652173913,
+          "anomaly_c": -0.9765307971014501,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 141
+        },
+        {
+          "year": 1973,
+          "temperature_c": 17.59619565217391,
+          "anomaly_c": 0.4859692028985485,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 65
+        },
+        {
+          "year": 1974,
+          "temperature_c": 16.773097826086957,
+          "anomaly_c": -0.33712862318840564,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 108
+        },
+        {
+          "year": 1975,
+          "temperature_c": 16.891847826086956,
+          "anomaly_c": -0.21837862318840706,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 99
+        },
+        {
+          "year": 1976,
+          "temperature_c": 18.160869565217393,
+          "anomaly_c": 1.0506431159420302,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 38
+        },
+        {
+          "year": 1977,
+          "temperature_c": 16.261684782608693,
+          "anomaly_c": -0.8485416666666694,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 134
+        },
+        {
+          "year": 1978,
+          "temperature_c": 15.84375,
+          "anomaly_c": -1.2664764492753626,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 151
+        },
+        {
+          "year": 1979,
+          "temperature_c": 16.737771739130434,
+          "anomaly_c": -0.3724547101449289,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 109
+        },
+        {
+          "year": 1980,
+          "temperature_c": 16.00951086956522,
+          "anomaly_c": -1.100715579710144,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 144
+        },
+        {
+          "year": 1981,
+          "temperature_c": 16.868478260869566,
+          "anomaly_c": -0.24174818840579704,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 101
+        },
+        {
+          "year": 1982,
+          "temperature_c": 17.860054347826086,
+          "anomaly_c": 0.7498278985507234,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 54
+        },
+        {
+          "year": 1983,
+          "temperature_c": 19.389673913043477,
+          "anomaly_c": 2.279447463768115,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 13
+        },
+        {
+          "year": 1984,
+          "temperature_c": 17.217934782608697,
+          "anomaly_c": 0.10770833333333485,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 82
+        },
+        {
+          "year": 1985,
+          "temperature_c": 17.386684782608693,
+          "anomaly_c": 0.2764583333333306,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 75
+        },
+        {
+          "year": 1986,
+          "temperature_c": 17.51929347826087,
+          "anomaly_c": 0.4090670289855076,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 70
+        },
+        {
+          "year": 1987,
+          "temperature_c": 17.051086956521736,
+          "anomaly_c": -0.0591394927536264,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 89
+        },
+        {
+          "year": 1988,
+          "temperature_c": 17.58423913043478,
+          "anomaly_c": 0.47401268115941875,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 66
+        },
+        {
+          "year": 1989,
+          "temperature_c": 17.86195652173913,
+          "anomaly_c": 0.7517300724637686,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 53
+        },
+        {
+          "year": 1990,
+          "temperature_c": 17.916304347826088,
+          "anomaly_c": 0.8060778985507255,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 47
+        },
+        {
+          "year": 1991,
+          "temperature_c": 18.584782608695654,
+          "anomaly_c": 1.4745561594202918,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 26
+        },
+        {
+          "year": 1992,
+          "temperature_c": 18.813858695652176,
+          "anomaly_c": 1.703632246376813,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 22
+        },
+        {
+          "year": 1993,
+          "temperature_c": 17.739402173913046,
+          "anomaly_c": 0.6291757246376832,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 58
+        },
+        {
+          "year": 1994,
+          "temperature_c": 19.676358695652173,
+          "anomaly_c": 2.56613224637681,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 11
+        },
+        {
+          "year": 1995,
+          "temperature_c": 18.241304347826084,
+          "anomaly_c": 1.1310778985507213,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 36
+        },
+        {
+          "year": 1996,
+          "temperature_c": 17.491304347826084,
+          "anomaly_c": 0.3810778985507213,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 72
+        },
+        {
+          "year": 1997,
+          "temperature_c": 17.867934782608696,
+          "anomaly_c": 0.7577083333333334,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 51
+        },
+        {
+          "year": 1998,
+          "temperature_c": 18.569565217391304,
+          "anomaly_c": 1.4593387681159413,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 27
+        },
+        {
+          "year": 1999,
+          "temperature_c": 17.923369565217392,
+          "anomaly_c": 0.8131431159420295,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 46
+        },
+        {
+          "year": 2000,
+          "temperature_c": 18.064673913043478,
+          "anomaly_c": 0.9544474637681155,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 40
+        },
+        {
+          "year": 2001,
+          "temperature_c": 18.22554347826087,
+          "anomaly_c": 1.1153170289855083,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 37
+        },
+        {
+          "year": 2002,
+          "temperature_c": 18.566576086956523,
+          "anomaly_c": 1.4563496376811607,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 28
+        },
+        {
+          "year": 2003,
+          "temperature_c": 22.14375,
+          "anomaly_c": 5.033523550724638,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 1
+        },
+        {
+          "year": 2004,
+          "temperature_c": 18.278532608695652,
+          "anomaly_c": 1.1683061594202897,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 35
+        },
+        {
+          "year": 2005,
+          "temperature_c": 18.36059782608696,
+          "anomaly_c": 1.2503713768115965,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 32
+        },
+        {
+          "year": 2006,
+          "temperature_c": 18.99836956521739,
+          "anomaly_c": 1.8881431159420288,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 17
+        },
+        {
+          "year": 2007,
+          "temperature_c": 17.80923913043478,
+          "anomaly_c": 0.6990126811594166,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 57
+        },
+        {
+          "year": 2008,
+          "temperature_c": 18.297826086956523,
+          "anomaly_c": 1.18759963768116,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 34
+        },
+        {
+          "year": 2009,
+          "temperature_c": 19.05298913043478,
+          "anomaly_c": 1.9427626811594187,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 16
+        },
+        {
+          "year": 2010,
+          "temperature_c": 18.66576086956522,
+          "anomaly_c": 1.555534420289856,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 23
+        },
+        {
+          "year": 2011,
+          "temperature_c": 18.007608695652173,
+          "anomaly_c": 0.8973822463768109,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 42
+        },
+        {
+          "year": 2012,
+          "temperature_c": 18.942391304347826,
+          "anomaly_c": 1.8321648550724632,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 19
+        },
+        {
+          "year": 2013,
+          "temperature_c": 18.975,
+          "anomaly_c": 1.8647735507246388,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 18
+        },
+        {
+          "year": 2014,
+          "temperature_c": 17.877173913043478,
+          "anomaly_c": 0.7669474637681155,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 50
+        },
+        {
+          "year": 2015,
+          "temperature_c": 20.67228260869565,
+          "anomaly_c": 3.562056159420287,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 4
+        },
+        {
+          "year": 2016,
+          "temperature_c": 18.936956521739127,
+          "anomaly_c": 1.8267300724637643,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 20
+        },
+        {
+          "year": 2017,
+          "temperature_c": 20.190489130434777,
+          "anomaly_c": 3.0802626811594145,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 8
+        },
+        {
+          "year": 2018,
+          "temperature_c": 20.5508152173913,
+          "anomaly_c": 3.440588768115937,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 5
+        },
+        {
+          "year": 2019,
+          "temperature_c": 20.255706521739132,
+          "anomaly_c": 3.1454800724637693,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 7
+        },
+        {
+          "year": 2020,
+          "temperature_c": 19.400000000000002,
+          "anomaly_c": 2.2897735507246395,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 12
+        },
+        {
+          "year": 2021,
+          "temperature_c": 18.592391304347824,
+          "anomaly_c": 1.4821648550724618,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 25
+        },
+        {
+          "year": 2022,
+          "temperature_c": 21.101630434782606,
+          "anomaly_c": 3.991403985507244,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 2
+        },
+        {
+          "year": 2023,
+          "temperature_c": 20.770652173913042,
+          "anomaly_c": 3.6604257246376797,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 3
+        },
+        {
+          "year": 2024,
+          "temperature_c": 20.147010869565218,
+          "anomaly_c": 3.0367844202898553,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 9
+        },
+        {
+          "year": 2025,
+          "temperature_c": 20.366847826086957,
+          "anomaly_c": 3.2566213768115944,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 92,
+          "days_expected": 92,
+          "rank": 6
+        },
+        {
+          "year": 2026,
+          "temperature_c": 22.873809523809523,
+          "anomaly_c": 5.637261904761907,
+          "period": "provisional",
+          "complete": false,
+          "days_observed": 84,
+          "days_expected": 92,
+          "rank": null
+        }
+      ]
+    },
+    "apr_sep": {
+      "summary": {
+        "season": "apr_sep",
+        "season_label": "April–September",
+        "baseline_start": 1961,
+        "baseline_end": 1990,
+        "baseline_temperature_c": 14.411,
+        "historical_period_start": 1864,
+        "historical_mean_anomaly_c": -0.113,
+        "historical_std_c": 0.738,
+        "recent_period_start": 1991,
+        "recent_period_end": 2025,
+        "recent_mean_anomaly_c": 1.618,
+        "recent_std_c": 0.842,
+        "mean_shift_c": 1.731,
+        "warmest_year": 2018,
+        "warmest_anomaly_c": 3.488,
+        "as_of": "2026-08-24"
+      },
+      "records": [
+        {
+          "year": 1864,
+          "temperature_c": 13.647404371584699,
+          "anomaly_c": -0.7640027322404386,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 138
+        },
+        {
+          "year": 1865,
+          "temperature_c": 15.81775956284153,
+          "anomaly_c": 1.406352459016393,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 23
+        },
+        {
+          "year": 1866,
+          "temperature_c": 14.07964480874317,
+          "anomaly_c": -0.3317622950819672,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 110
+        },
+        {
+          "year": 1867,
+          "temperature_c": 14.484972677595628,
+          "anomaly_c": 0.073565573770491,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 83
+        },
+        {
+          "year": 1868,
+          "temperature_c": 15.801775956284153,
+          "anomaly_c": 1.3903688524590159,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 25
+        },
+        {
+          "year": 1869,
+          "temperature_c": 14.697677595628416,
+          "anomaly_c": 0.286270491803279,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 69
+        },
+        {
+          "year": 1870,
+          "temperature_c": 14.681693989071038,
+          "anomaly_c": 0.27028688524590017,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 71
+        },
+        {
+          "year": 1871,
+          "temperature_c": 14.39945355191257,
+          "anomaly_c": -0.011953551912567306,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 86
+        },
+        {
+          "year": 1872,
+          "temperature_c": 14.340437158469946,
+          "anomaly_c": -0.0709699453551913,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 92
+        },
+        {
+          "year": 1873,
+          "temperature_c": 14.40191256830601,
+          "anomaly_c": -0.009494535519127822,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 85
+        },
+        {
+          "year": 1874,
+          "temperature_c": 14.606147540983605,
+          "anomaly_c": 0.19474043715846712,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 72
+        },
+        {
+          "year": 1875,
+          "temperature_c": 15.104918032786884,
+          "anomaly_c": 0.6935109289617465,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 50
+        },
+        {
+          "year": 1876,
+          "temperature_c": 13.94931693989071,
+          "anomaly_c": -0.4620901639344268,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 119
+        },
+        {
+          "year": 1877,
+          "temperature_c": 14.037295081967212,
+          "anomaly_c": -0.37411202185792547,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 113
+        },
+        {
+          "year": 1878,
+          "temperature_c": 14.273770491803278,
+          "anomaly_c": -0.1376366120218595,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 97
+        },
+        {
+          "year": 1879,
+          "temperature_c": 13.099590163934426,
+          "anomaly_c": -1.3118169398907114,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 159
+        },
+        {
+          "year": 1880,
+          "temperature_c": 13.999726775956285,
+          "anomaly_c": -0.41168032786885256,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 115
+        },
+        {
+          "year": 1881,
+          "temperature_c": 14.206557377049181,
+          "anomaly_c": -0.20484972677595614,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 101
+        },
+        {
+          "year": 1882,
+          "temperature_c": 13.236748633879783,
+          "anomaly_c": -1.1746584699453546,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 155
+        },
+        {
+          "year": 1883,
+          "temperature_c": 13.535245901639342,
+          "anomaly_c": -0.876161202185795,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 144
+        },
+        {
+          "year": 1884,
+          "temperature_c": 14.03032786885246,
+          "anomaly_c": -0.3810792349726775,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 114
+        },
+        {
+          "year": 1885,
+          "temperature_c": 14.142486338797813,
+          "anomaly_c": -0.26892076502732465,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 108
+        },
+        {
+          "year": 1886,
+          "temperature_c": 14.522677595628416,
+          "anomaly_c": 0.1112704918032783,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 80
+        },
+        {
+          "year": 1887,
+          "temperature_c": 13.875273224043717,
+          "anomaly_c": -0.5361338797814206,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 126
+        },
+        {
+          "year": 1888,
+          "temperature_c": 13.439754098360655,
+          "anomaly_c": -0.9716530054644821,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 147
+        },
+        {
+          "year": 1889,
+          "temperature_c": 13.825136612021858,
+          "anomaly_c": -0.5862704918032797,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 127
+        },
+        {
+          "year": 1890,
+          "temperature_c": 13.462431693989071,
+          "anomaly_c": -0.9489754098360663,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 145
+        },
+        {
+          "year": 1891,
+          "temperature_c": 13.323770491803279,
+          "anomaly_c": -1.0876366120218588,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 151
+        },
+        {
+          "year": 1892,
+          "temperature_c": 14.499726775956283,
+          "anomaly_c": 0.08831967213114567,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 82
+        },
+        {
+          "year": 1893,
+          "temperature_c": 15.198497267759562,
+          "anomaly_c": 0.7870901639344243,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 44
+        },
+        {
+          "year": 1894,
+          "temperature_c": 13.93948087431694,
+          "anomaly_c": -0.4719262295081972,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 120
+        },
+        {
+          "year": 1895,
+          "temperature_c": 14.936475409836065,
+          "anomaly_c": 0.5250683060109278,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 61
+        },
+        {
+          "year": 1896,
+          "temperature_c": 13.080054644808744,
+          "anomaly_c": -1.3313524590163937,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 160
+        },
+        {
+          "year": 1897,
+          "temperature_c": 14.137431693989072,
+          "anomaly_c": -0.2739754098360656,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 109
+        },
+        {
+          "year": 1898,
+          "temperature_c": 14.168579234972677,
+          "anomaly_c": -0.24282786885246033,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 106
+        },
+        {
+          "year": 1899,
+          "temperature_c": 14.191666666666668,
+          "anomaly_c": -0.21974043715846925,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 103
+        },
+        {
+          "year": 1900,
+          "temperature_c": 14.361338797814208,
+          "anomaly_c": -0.05006830601092993,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 90
+        },
+        {
+          "year": 1901,
+          "temperature_c": 14.394398907103826,
+          "anomaly_c": -0.01700819672131182,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 88
+        },
+        {
+          "year": 1902,
+          "temperature_c": 13.550546448087431,
+          "anomaly_c": -0.8608606557377065,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 142
+        },
+        {
+          "year": 1903,
+          "temperature_c": 13.133879781420765,
+          "anomaly_c": -1.2775273224043726,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 158
+        },
+        {
+          "year": 1904,
+          "temperature_c": 15.16311475409836,
+          "anomaly_c": 0.7517076502732234,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 46
+        },
+        {
+          "year": 1905,
+          "temperature_c": 14.526639344262295,
+          "anomaly_c": 0.11523224043715707,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 78
+        },
+        {
+          "year": 1906,
+          "temperature_c": 14.230601092896174,
+          "anomaly_c": -0.1808060109289631,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 100
+        },
+        {
+          "year": 1907,
+          "temperature_c": 13.719262295081966,
+          "anomaly_c": -0.692144808743171,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 133
+        },
+        {
+          "year": 1908,
+          "temperature_c": 13.89931693989071,
+          "anomaly_c": -0.5120901639344275,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 124
+        },
+        {
+          "year": 1909,
+          "temperature_c": 13.35464480874317,
+          "anomaly_c": -1.0567622950819668,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 149
+        },
+        {
+          "year": 1910,
+          "temperature_c": 12.985245901639345,
+          "anomaly_c": -1.4261612021857921,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 161
+        },
+        {
+          "year": 1911,
+          "temperature_c": 15.40532786885246,
+          "anomaly_c": 0.9939207650273225,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 35
+        },
+        {
+          "year": 1912,
+          "temperature_c": 12.695765027322404,
+          "anomaly_c": -1.7156420765027338,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 162
+        },
+        {
+          "year": 1913,
+          "temperature_c": 13.164617486338798,
+          "anomaly_c": -1.246789617486339,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 157
+        },
+        {
+          "year": 1914,
+          "temperature_c": 13.536065573770491,
+          "anomaly_c": -0.8753415300546461,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 143
+        },
+        {
+          "year": 1915,
+          "temperature_c": 13.904508196721311,
+          "anomaly_c": -0.5068989071038263,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 123
+        },
+        {
+          "year": 1916,
+          "temperature_c": 13.26967213114754,
+          "anomaly_c": -1.1417349726775967,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 154
+        },
+        {
+          "year": 1917,
+          "temperature_c": 14.595081967213114,
+          "anomaly_c": 0.18367486338797612,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 74
+        },
+        {
+          "year": 1918,
+          "temperature_c": 13.973633879781422,
+          "anomaly_c": -0.4377732240437151,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 117
+        },
+        {
+          "year": 1919,
+          "temperature_c": 13.896174863387978,
+          "anomaly_c": -0.5152322404371592,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 125
+        },
+        {
+          "year": 1920,
+          "temperature_c": 14.335245901639343,
+          "anomaly_c": -0.07616120218579425,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 94
+        },
+        {
+          "year": 1921,
+          "temperature_c": 14.975546448087432,
+          "anomaly_c": 0.5641393442622942,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 59
+        },
+        {
+          "year": 1922,
+          "temperature_c": 13.623907103825138,
+          "anomaly_c": -0.7874999999999996,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 140
+        },
+        {
+          "year": 1923,
+          "temperature_c": 14.06912568306011,
+          "anomaly_c": -0.342281420765028,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 111
+        },
+        {
+          "year": 1924,
+          "temperature_c": 13.796174863387977,
+          "anomaly_c": -0.6152322404371606,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 131
+        },
+        {
+          "year": 1925,
+          "temperature_c": 13.768852459016392,
+          "anomaly_c": -0.6425546448087456,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 132
+        },
+        {
+          "year": 1926,
+          "temperature_c": 13.97896174863388,
+          "anomaly_c": -0.43244535519125726,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 116
+        },
+        {
+          "year": 1927,
+          "temperature_c": 14.307377049180328,
+          "anomaly_c": -0.10403005464480941,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 95
+        },
+        {
+          "year": 1928,
+          "temperature_c": 14.729508196721312,
+          "anomaly_c": 0.3181010928961747,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 67
+        },
+        {
+          "year": 1929,
+          "temperature_c": 14.759699453551914,
+          "anomaly_c": 0.34829234972677625,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 66
+        },
+        {
+          "year": 1930,
+          "temperature_c": 14.395081967213116,
+          "anomaly_c": -0.016325136612021396,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 87
+        },
+        {
+          "year": 1931,
+          "temperature_c": 13.70669398907104,
+          "anomaly_c": -0.7047131147540977,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 135
+        },
+        {
+          "year": 1932,
+          "temperature_c": 14.337704918032788,
+          "anomaly_c": -0.07370218579234944,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 93
+        },
+        {
+          "year": 1933,
+          "temperature_c": 14.34467213114754,
+          "anomaly_c": -0.06673497267759743,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 91
+        },
+        {
+          "year": 1934,
+          "temperature_c": 15.373360655737704,
+          "anomaly_c": 0.9619535519125666,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 38
+        },
+        {
+          "year": 1935,
+          "temperature_c": 14.52308743169399,
+          "anomaly_c": 0.11168032786885185,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 79
+        },
+        {
+          "year": 1936,
+          "temperature_c": 13.921584699453552,
+          "anomaly_c": -0.4898224043715853,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 121
+        },
+        {
+          "year": 1937,
+          "temperature_c": 14.8198087431694,
+          "anomaly_c": 0.40840163934426243,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 65
+        },
+        {
+          "year": 1938,
+          "temperature_c": 13.71311475409836,
+          "anomaly_c": -0.6982923497267777,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 134
+        },
+        {
+          "year": 1939,
+          "temperature_c": 13.65054644808743,
+          "anomaly_c": -0.7608606557377069,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 137
+        },
+        {
+          "year": 1940,
+          "temperature_c": 13.80068306010929,
+          "anomaly_c": -0.6107240437158481,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 130
+        },
+        {
+          "year": 1941,
+          "temperature_c": 13.325409836065575,
+          "anomaly_c": -1.0859972677595628,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 150
+        },
+        {
+          "year": 1942,
+          "temperature_c": 14.86912568306011,
+          "anomaly_c": 0.4577185792349727,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 64
+        },
+        {
+          "year": 1943,
+          "temperature_c": 15.177459016393444,
+          "anomaly_c": 0.7660519125683063,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 45
+        },
+        {
+          "year": 1944,
+          "temperature_c": 15.021584699453554,
+          "anomaly_c": 0.6101775956284161,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 55
+        },
+        {
+          "year": 1945,
+          "temperature_c": 15.878688524590165,
+          "anomaly_c": 1.467281420765028,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 21
+        },
+        {
+          "year": 1946,
+          "temperature_c": 15.007103825136612,
+          "anomaly_c": 0.5956967213114748,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 56
+        },
+        {
+          "year": 1947,
+          "temperature_c": 17.07021857923497,
+          "anomaly_c": 2.658811475409834,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 5
+        },
+        {
+          "year": 1948,
+          "temperature_c": 14.196994535519126,
+          "anomaly_c": -0.2144125683060114,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 102
+        },
+        {
+          "year": 1949,
+          "temperature_c": 15.959016393442623,
+          "anomaly_c": 1.5476092896174851,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 16
+        },
+        {
+          "year": 1950,
+          "temperature_c": 15.469808743169398,
+          "anomaly_c": 1.058401639344261,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 33
+        },
+        {
+          "year": 1951,
+          "temperature_c": 14.305327868852459,
+          "anomaly_c": -0.1060792349726789,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 96
+        },
+        {
+          "year": 1952,
+          "temperature_c": 15.526366120218578,
+          "anomaly_c": 1.1149590163934402,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 29
+        },
+        {
+          "year": 1953,
+          "temperature_c": 14.971311475409836,
+          "anomaly_c": 0.5599043715846985,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 60
+        },
+        {
+          "year": 1954,
+          "temperature_c": 13.625546448087432,
+          "anomaly_c": -0.7858606557377055,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 139
+        },
+        {
+          "year": 1955,
+          "temperature_c": 14.167759562841528,
+          "anomaly_c": -0.2436475409836092,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 107
+        },
+        {
+          "year": 1956,
+          "temperature_c": 13.552185792349729,
+          "anomaly_c": -0.8592213114754088,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 141
+        },
+        {
+          "year": 1957,
+          "temperature_c": 13.699453551912569,
+          "anomaly_c": -0.7119535519125684,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 136
+        },
+        {
+          "year": 1958,
+          "temperature_c": 14.582786885245902,
+          "anomaly_c": 0.1713797814207645,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 76
+        },
+        {
+          "year": 1959,
+          "temperature_c": 15.259426229508199,
+          "anomaly_c": 0.8480191256830611,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 42
+        },
+        {
+          "year": 1960,
+          "temperature_c": 13.969945355191257,
+          "anomaly_c": -0.44146174863388055,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 118
+        },
+        {
+          "year": 1961,
+          "temperature_c": 15.037158469945355,
+          "anomaly_c": 0.6257513661202179,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 54
+        },
+        {
+          "year": 1962,
+          "temperature_c": 14.187431693989073,
+          "anomaly_c": -0.2239754098360649,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 104
+        },
+        {
+          "year": 1963,
+          "temperature_c": 14.377732240437158,
+          "anomaly_c": -0.033674863387979315,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 89
+        },
+        {
+          "year": 1964,
+          "temperature_c": 15.443442622950817,
+          "anomaly_c": 1.0320355191256798,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 34
+        },
+        {
+          "year": 1965,
+          "temperature_c": 13.315573770491802,
+          "anomaly_c": -1.095833333333335,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 152
+        },
+        {
+          "year": 1966,
+          "temperature_c": 14.604508196721312,
+          "anomaly_c": 0.19310109289617472,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 73
+        },
+        {
+          "year": 1967,
+          "temperature_c": 14.24795081967213,
+          "anomaly_c": -0.16345628415300695,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 98
+        },
+        {
+          "year": 1968,
+          "temperature_c": 13.820901639344262,
+          "anomaly_c": -0.5905054644808754,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 128
+        },
+        {
+          "year": 1969,
+          "temperature_c": 14.234699453551912,
+          "anomaly_c": -0.17670765027322588,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 99
+        },
+        {
+          "year": 1970,
+          "temperature_c": 14.170628415300547,
+          "anomaly_c": -0.24077868852459083,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 105
+        },
+        {
+          "year": 1971,
+          "temperature_c": 15.078142076502733,
+          "anomaly_c": 0.6667349726775953,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 52
+        },
+        {
+          "year": 1972,
+          "temperature_c": 13.17090163934426,
+          "anomaly_c": -1.2405054644808775,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 156
+        },
+        {
+          "year": 1973,
+          "temperature_c": 14.535109289617488,
+          "anomaly_c": 0.12370218579235015,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 77
+        },
+        {
+          "year": 1974,
+          "temperature_c": 14.053825136612021,
+          "anomaly_c": -0.3575819672131164,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 112
+        },
+        {
+          "year": 1975,
+          "temperature_c": 14.502185792349728,
+          "anomaly_c": 0.09077868852459048,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 81
+        },
+        {
+          "year": 1976,
+          "temperature_c": 14.873497267759564,
+          "anomaly_c": 0.4620901639344268,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 63
+        },
+        {
+          "year": 1977,
+          "temperature_c": 13.378551912568303,
+          "anomaly_c": -1.032855191256834,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 148
+        },
+        {
+          "year": 1978,
+          "temperature_c": 13.30587431693989,
+          "anomaly_c": -1.105532786885247,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 153
+        },
+        {
+          "year": 1979,
+          "temperature_c": 13.912021857923497,
+          "anomaly_c": -0.4993852459016406,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 122
+        },
+        {
+          "year": 1980,
+          "temperature_c": 13.444672131147541,
+          "anomaly_c": -0.966734972677596,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 146
+        },
+        {
+          "year": 1981,
+          "temperature_c": 14.584836065573771,
+          "anomaly_c": 0.17342896174863398,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 75
+        },
+        {
+          "year": 1982,
+          "temperature_c": 15.11584699453552,
+          "anomaly_c": 0.7044398907103826,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 49
+        },
+        {
+          "year": 1983,
+          "temperature_c": 15.49931693989071,
+          "anomaly_c": 1.0879098360655721,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 30
+        },
+        {
+          "year": 1984,
+          "temperature_c": 13.813524590163935,
+          "anomaly_c": -0.5978825136612027,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 129
+        },
+        {
+          "year": 1985,
+          "temperature_c": 14.915983606557377,
+          "anomaly_c": 0.50457650273224,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 62
+        },
+        {
+          "year": 1986,
+          "temperature_c": 14.691256830601093,
+          "anomaly_c": 0.27984972677595543,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 70
+        },
+        {
+          "year": 1987,
+          "temperature_c": 14.714207650273224,
+          "anomaly_c": 0.3028005464480863,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 68
+        },
+        {
+          "year": 1988,
+          "temperature_c": 15.142622950819675,
+          "anomaly_c": 0.7312158469945373,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 47
+        },
+        {
+          "year": 1989,
+          "temperature_c": 15.093032786885246,
+          "anomaly_c": 0.6816256830601084,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 51
+        },
+        {
+          "year": 1990,
+          "temperature_c": 15.076775956284154,
+          "anomaly_c": 0.6653688524590162,
+          "period": "historical",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 53
+        },
+        {
+          "year": 1991,
+          "temperature_c": 15.14139344262295,
+          "anomaly_c": 0.7299863387978132,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 48
+        },
+        {
+          "year": 1992,
+          "temperature_c": 15.90915300546448,
+          "anomaly_c": 1.4977459016393428,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 19
+        },
+        {
+          "year": 1993,
+          "temperature_c": 15.296584699453552,
+          "anomaly_c": 0.8851775956284147,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 40
+        },
+        {
+          "year": 1994,
+          "temperature_c": 15.757377049180327,
+          "anomaly_c": 1.3459699453551899,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 26
+        },
+        {
+          "year": 1995,
+          "temperature_c": 14.975956284153005,
+          "anomaly_c": 0.5645491803278677,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 58
+        },
+        {
+          "year": 1996,
+          "temperature_c": 14.411612021857923,
+          "anomaly_c": 0.0002049180327858835,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 84
+        },
+        {
+          "year": 1997,
+          "temperature_c": 15.246857923497268,
+          "anomaly_c": 0.8354508196721309,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 43
+        },
+        {
+          "year": 1998,
+          "temperature_c": 15.585109289617488,
+          "anomaly_c": 1.1737021857923509,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 28
+        },
+        {
+          "year": 1999,
+          "temperature_c": 15.898497267759565,
+          "anomaly_c": 1.4870901639344272,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 20
+        },
+        {
+          "year": 2000,
+          "temperature_c": 15.87035519125683,
+          "anomaly_c": 1.4589480874316934,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 22
+        },
+        {
+          "year": 2001,
+          "temperature_c": 14.988934426229507,
+          "anomaly_c": 0.5775273224043698,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 57
+        },
+        {
+          "year": 2002,
+          "temperature_c": 15.260928961748634,
+          "anomaly_c": 0.8495218579234969,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 41
+        },
+        {
+          "year": 2003,
+          "temperature_c": 17.70546448087432,
+          "anomaly_c": 3.2940573770491817,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 2
+        },
+        {
+          "year": 2004,
+          "temperature_c": 15.48743169398907,
+          "anomaly_c": 1.0760245901639323,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 32
+        },
+        {
+          "year": 2005,
+          "temperature_c": 15.803551912568308,
+          "anomaly_c": 1.3921448087431703,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 24
+        },
+        {
+          "year": 2006,
+          "temperature_c": 16.241120218579233,
+          "anomaly_c": 1.829713114754096,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 14
+        },
+        {
+          "year": 2007,
+          "temperature_c": 15.956967213114755,
+          "anomaly_c": 1.5455601092896174,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 17
+        },
+        {
+          "year": 2008,
+          "temperature_c": 15.311748633879782,
+          "anomaly_c": 0.9003415300546447,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 39
+        },
+        {
+          "year": 2009,
+          "temperature_c": 16.854508196721312,
+          "anomaly_c": 2.4431010928961747,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 8
+        },
+        {
+          "year": 2010,
+          "temperature_c": 15.384562841530055,
+          "anomaly_c": 0.9731557377049178,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 36
+        },
+        {
+          "year": 2011,
+          "temperature_c": 16.55710382513661,
+          "anomaly_c": 2.1456967213114737,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 11
+        },
+        {
+          "year": 2012,
+          "temperature_c": 15.922540983606556,
+          "anomaly_c": 1.5111338797814184,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 18
+        },
+        {
+          "year": 2013,
+          "temperature_c": 15.49412568306011,
+          "anomaly_c": 1.0827185792349727,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 31
+        },
+        {
+          "year": 2014,
+          "temperature_c": 15.628142076502732,
+          "anomaly_c": 1.2167349726775942,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 27
+        },
+        {
+          "year": 2015,
+          "temperature_c": 16.81584699453552,
+          "anomaly_c": 2.404439890710382,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 9
+        },
+        {
+          "year": 2016,
+          "temperature_c": 16.07540983606557,
+          "anomaly_c": 1.6640027322404336,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 15
+        },
+        {
+          "year": 2017,
+          "temperature_c": 16.440983606557378,
+          "anomaly_c": 2.0295765027322403,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 12
+        },
+        {
+          "year": 2018,
+          "temperature_c": 17.899590163934423,
+          "anomaly_c": 3.488183060109286,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 1
+        },
+        {
+          "year": 2019,
+          "temperature_c": 16.278551912568307,
+          "anomaly_c": 1.86714480874317,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 13
+        },
+        {
+          "year": 2020,
+          "temperature_c": 16.970628415300546,
+          "anomaly_c": 2.559221311475408,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 7
+        },
+        {
+          "year": 2021,
+          "temperature_c": 15.381010928961748,
+          "anomaly_c": 0.9696038251366108,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 37
+        },
+        {
+          "year": 2022,
+          "temperature_c": 17.432650273224045,
+          "anomaly_c": 3.0212431693989075,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 3
+        },
+        {
+          "year": 2023,
+          "temperature_c": 17.427322404371584,
+          "anomaly_c": 3.015915300546446,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 4
+        },
+        {
+          "year": 2024,
+          "temperature_c": 16.606967213114753,
+          "anomaly_c": 2.195560109289616,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 10
+        },
+        {
+          "year": 2025,
+          "temperature_c": 17.00136612021858,
+          "anomaly_c": 2.5899590163934434,
+          "period": "recent",
+          "complete": true,
+          "days_observed": 183,
+          "days_expected": 183,
+          "rank": 6
+        },
+        {
+          "year": 2026,
+          "temperature_c": 19.025,
+          "anomaly_c": 4.66108045977011,
+          "period": "provisional",
+          "complete": false,
+          "days_observed": 145,
+          "days_expected": 183,
+          "rank": null
+        }
+      ]
+    }
+  }
+}
