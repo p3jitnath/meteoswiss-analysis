@@ -5,4 +5,5 @@ __pycache__/
 .ruff_cache/
 website/node_modules/
 website/dist/
+website/*.tsbuildinfo
 .DS_Store
