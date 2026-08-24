@@ -152,13 +152,14 @@ def make_figure(
         _density_axis(axes[0], records, summary)
         _timeline_axis(axes[1], records)
         axes[0].text(
-            0.98,
-            0.97,
-            f"Mean shift: +{summary['mean_shift_c']:.2f} °C",
-            transform=axes[0].transAxes,
-            ha="right",
+            float(summary["recent_mean_anomaly_c"]) + 0.18,
+            0.96,
+            f"Mean shift\n+{summary['mean_shift_c']:.2f} °C",
+            transform=axes[0].get_xaxis_transform(),
+            ha="left",
             va="top",
             fontsize=8,
+            linespacing=1.15,
         )
         findings = audit_figure(figure, expected_font="Nimbus Sans")
         if findings:
