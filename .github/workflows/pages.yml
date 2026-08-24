@@ -30,8 +30,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: uv sync --locked
+        if: github.event_name != 'push'
       - run: uv run meteoswiss-analysis download
+        if: github.event_name != 'push'
       - run: uv run meteoswiss-analysis analyse
+        if: github.event_name != 'push'
       - run: mkdir -p website/public/data && cp data/processed/analysis.json website/public/data/analysis.json
       - uses: actions/setup-node@v4
         with:
