@@ -63,6 +63,9 @@ tests/                    scientific aggregation tests
 .github/workflows/        CI, weekly refresh, and GitHub Pages deployment
 ```
 
+The website's grid, typography, responsive composition, reveal behaviour, and accessibility
+decisions are documented in [`docs/web-design-system.md`](docs/web-design-system.md).
+
 ## Automation
 
 - `ci.yml` tests and lints Python, reproduces the analysis, and builds the React site.

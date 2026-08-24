@@ -103,7 +103,7 @@ function Timeline({ records, onSelect }: { records: Record[]; onSelect: (record:
       {records.map((record) => {
         const colour = record.complete ? (record.year <= 1990 ? BLUE : RED) : PURPLE;
         const top = record.anomaly_c >= 0 ? y(record.anomaly_c) : y(0);
-        return <rect key={record.year} className="bar" x={x(record.year) - barWidth / 2} y={top} width={barWidth} height={Math.max(2, Math.abs(y(record.anomaly_c) - y(0)))} fill={colour} opacity={record.complete ? 0.88 : 0.58} stroke={record.complete ? "none" : PURPLE} strokeDasharray={record.complete ? undefined : "3 2"} tabIndex={0} onMouseEnter={() => onSelect(record)} onFocus={() => onSelect(record)}><title>{record.year}: {signed(record.anomaly_c)}</title></rect>;
+        return <rect key={record.year} className="bar" x={x(record.year) - barWidth / 2} y={top} width={barWidth} height={Math.max(2, Math.abs(y(record.anomaly_c) - y(0)))} fill={colour} opacity={record.complete ? 0.88 : 0.58} stroke={record.complete ? "none" : PURPLE} strokeDasharray={record.complete ? undefined : "3 2"} tabIndex={0} onClick={() => onSelect(record)} onMouseEnter={() => onSelect(record)} onFocus={() => onSelect(record)}><title>{record.year}: {signed(record.anomaly_c)}</title></rect>;
       })}
       {[1864, 1900, 1950, 1990, 2026].map((tick) => <text key={tick} x={x(tick)} y={height - 18} textAnchor="middle">{tick}</text>)}
       <text x={width / 2} y={height - 1} textAnchor="middle" className="axis-label">Year</text>
@@ -119,30 +119,55 @@ export default function App() {
   useEffect(() => { fetch("./data/analysis.json").then((response) => response.json()).then(setPayload); }, []);
   const season = payload?.seasons[seasonKey];
   const latest = useMemo(() => season?.records.at(-1) ?? null, [season]);
-  useEffect(() => { setSelected(latest); }, [latest]);
+  useEffect(() => {
+    document.documentElement.dataset.reveal = "enabled";
+    const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    elements.forEach((element) => observer.observe(element));
+    const toggleGrid = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement;
+      if (event.key.toLowerCase() === "g" && !target.matches("input, textarea, select")) {
+        document.documentElement.toggleAttribute("data-grid");
+      }
+    };
+    window.addEventListener("keydown", toggleGrid);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("keydown", toggleGrid);
+    };
+  }, [payload, seasonKey]);
   if (!payload || !season) return <main className="loading">Loading MeteoSwiss analysis…</main>;
   const partial = season.records.find((record) => !record.complete);
+  const displayed = selected ?? latest;
   return (
     <>
+      <div className="grid-overlay" aria-hidden="true" />
       <header className="site-header">
         <nav className="topbar"><a className="identity" href="#top" aria-label="Swiss Climate Analysis home"><span className="identity-mark">Swiss Climate</span><span className="identity-unit"><b>Temperature analysis</b><small>Open research report</small></span></a><div className="nav-links"><a href="#findings">Findings</a><a href="#methods">Methods</a><a href="#data">Data</a><a className="code-link" href="https://github.com/p3jitnath/meteoswiss-analysis" aria-label="View source code on GitHub"><GitHubMark /><span>Code</span></a></div></nav>
       </header>
-      <header className="report-header" id="top">
+      <header className="report-header" id="top" data-reveal>
         <div className="report-meta"><span>Research brief</span><span>24 August 2026</span><span>Version 1.0</span></div><p className="eyebrow">Observed climate change · Switzerland</p><h1>The shifting distribution of Swiss summer temperatures since 1864</h1><p className="dek">An updated four-station analysis of homogeneous 2 m air temperature records shows that recent Swiss summers occupy a substantially warmer climate regime.</p><div className="byline"><span>Analysis by Pritthijit Nath</span><span>Data: Federal Office of Meteorology and Climatology MeteoSwiss</span></div>
       </header>
       <main>
-        <section className="abstract"><p className="section-label">Abstract</p><p>We update the observational analysis of Schär et al. (2004) using homogeneous temperature records from Basel, Bern, Geneva and Zürich. Complete June–August seasons from 1991–{payload.seasons.jja.summary.recent_period_end} average <strong>{payload.seasons.jja.summary.mean_shift_c.toFixed(2)} °C warmer</strong> than the 1864–1990 record. The interactive results distinguish completed seasons from an explicitly provisional 2026 season-to-date value.</p></section>
-        <section className="controls" aria-label="Season selection"><button className={seasonKey === "jja" ? "active" : ""} onClick={() => setSeasonKey("jja")}>Meteorological summer · JJA</button><button className={seasonKey === "apr_sep" ? "active" : ""} onClick={() => setSeasonKey("apr_sep")}>Warm half-year · Apr–Sep</button></section>
-        <section className="metrics" id="findings">
+        <section className="abstract" data-reveal><p className="section-label">Abstract</p><p>We update the observational analysis of Schär et al. (2004) using homogeneous temperature records from Basel, Bern, Geneva and Zürich. Complete June–August seasons from 1991–{payload.seasons.jja.summary.recent_period_end} average <strong>{payload.seasons.jja.summary.mean_shift_c.toFixed(2)} °C warmer</strong> than the 1864–1990 record. The interactive results distinguish completed seasons from an explicitly provisional 2026 season-to-date value.</p></section>
+        <section className="controls" aria-label="Season selection" data-reveal><button className={seasonKey === "jja" ? "active" : ""} onClick={() => { setSeasonKey("jja"); setSelected(null); }}>Meteorological summer · JJA</button><button className={seasonKey === "apr_sep" ? "active" : ""} onClick={() => { setSeasonKey("apr_sep"); setSelected(null); }}>Warm half-year · Apr–Sep</button></section>
+        <section className="metrics" id="findings" data-reveal>
           <article><span>Mean shift</span><strong>+{season.summary.mean_shift_c.toFixed(2)}°</strong><small>1991–{season.summary.recent_period_end} vs 1864–1990</small></article>
           <article><span>Warmest complete season</span><strong>{season.summary.warmest_year}</strong><small>{signed(season.summary.warmest_anomaly_c)}</small></article>
           <article><span>Current view</span><strong>{partial ? signed(partial.anomaly_c) : "Complete"}</strong><small>{partial ? `${partial.days_observed} of ${partial.days_expected} days · provisional` : `through ${season.summary.recent_period_end}`}</small></article>
         </section>
-        <figure className="panel split"><figcaption><p className="figure-number">Figure 1</p><h2>The complete distribution has shifted towards warmer summers</h2><p>Kernel-density estimates include completed seasons only. The vertical reference denotes the 1961–1990 mean. Curves describe observed variability and do not represent forecasts.</p><div className="legend"><span><i className="blue" />1864–1990</span><span><i className="red" />1991–{season.summary.recent_period_end}</span></div></figcaption><Distribution records={season.records} /></figure>
-        <figure className="panel"><div className="section-head"><figcaption><p className="figure-number">Figure 2</p><h2>Annual {season.summary.season_label} temperature anomalies</h2></figcaption><div className="selection" aria-live="polite"><b>{selected?.year}</b><strong>{selected && signed(selected.anomaly_c)}</strong><small>{selected?.complete ? `warm rank ${selected.rank}` : `${selected?.days_observed}/${selected?.days_expected} days, provisional`}</small></div></div><Timeline records={season.records} onSelect={setSelected} /><p className="hint">Interactive: hover or focus a bar to inspect a year. The outlined final bar is a like-for-like season-to-date anomaly and is not an estimate of the final summer mean.</p></figure>
-        <section className="method" id="methods"><p className="section-label">Methods</p><h2>Reproducible station-based analysis</h2><div className="method-grid"><div><b>Observations</b><p>Homogeneous monthly mean 2 m air temperature from Basel/Binningen, Bern/Zollikofen, Geneva/Cointrin and Zürich/Fluntern.</p></div><div><b>Aggregation</b><p>Stations receive equal weight. Monthly station composites are weighted by calendar days to obtain seasonal means.</p></div><div><b>Reference and provisional data</b><p>Completed anomalies use 1961–1990. The incomplete season uses daily values and the matching baseline calendar window; it is excluded from ranks and densities.</p></div></div></section>
-        <section className="data-section" id="data"><div><p className="section-label">Data and reproducibility</p><h2>Every result is inspectable.</h2><p>Source data, processed tables, figure-generation code and the complete web application are versioned together. Automated tests verify seasonal weighting and incomplete-season handling.</p></div><div className="download-list"><a href="./data/analysis.json" download><span>Analysis dataset<small>JSON · machine readable</small></span></a><a href="https://github.com/p3jitnath/meteoswiss-analysis/tree/main/figures"><span>Publication figures<small>PDF + 300 dpi PNG</small></span></a><a href="https://github.com/p3jitnath/meteoswiss-analysis/blob/main/docs/methodology.md"><span>Full methodology<small>Assumptions and differences</small></span></a></div></section>
-        <section className="citation"><p className="section-label">Reference</p><p>Schär, C. et al. (2004). The role of increasing temperature variability in European summer heatwaves. <em>Nature</em> 427, 332–336. <a href="https://doi.org/10.1038/nature02300">doi:10.1038/nature02300</a>.</p></section>
+        <figure className="panel split" data-reveal><figcaption><p className="figure-number">01 / Distribution</p><h2>The complete distribution has shifted towards warmer summers</h2><p>Kernel-density estimates include completed seasons only. The vertical reference denotes the 1961–1990 mean. Curves describe observed variability and do not represent forecasts.</p><div className="legend"><span><i className="blue" />1864–1990</span><span><i className="red" />1991–{season.summary.recent_period_end}</span></div></figcaption><Distribution records={season.records} /></figure>
+        <figure className="panel timeline-panel" data-reveal><div className="section-head"><figcaption><p className="figure-number">02 / Annual record</p><h2>Annual {season.summary.season_label} temperature anomalies</h2></figcaption><div className="selection" aria-live="polite"><b>{displayed?.year}</b><strong>{displayed && signed(displayed.anomaly_c)}</strong><small>{displayed?.complete ? `warm rank ${displayed.rank}` : `${displayed?.days_observed}/${displayed?.days_expected} days, provisional`}</small></div></div><div className="timeline-scroll"><Timeline records={season.records} onSelect={setSelected} /></div><p className="hint">Interactive: hover, tap or focus a bar to inspect a year. The outlined final bar is a like-for-like season-to-date anomaly and is not an estimate of the final summer mean.</p></figure>
+        <section className="method" id="methods" data-reveal><p className="section-label">03 / Methods</p><h2>Reproducible station-based analysis</h2><div className="method-grid"><div><b>Observations</b><p>Homogeneous monthly mean 2 m air temperature from Basel/Binningen, Bern/Zollikofen, Geneva/Cointrin and Zürich/Fluntern.</p></div><div><b>Aggregation</b><p>Stations receive equal weight. Monthly station composites are weighted by calendar days to obtain seasonal means.</p></div><div><b>Reference and provisional data</b><p>Completed anomalies use 1961–1990. The incomplete season uses daily values and the matching baseline calendar window; it is excluded from ranks and densities.</p></div></div></section>
+        <section className="data-section" id="data" data-reveal><div><p className="section-label">04 / Data and reproducibility</p><h2>Every result is inspectable.</h2><p>Source data, processed tables, figure-generation code and the complete web application are versioned together. Automated tests verify seasonal weighting and incomplete-season handling.</p></div><div className="download-list"><a href="./data/analysis.json" download><span>Analysis dataset<small>JSON · machine readable</small></span></a><a href="https://github.com/p3jitnath/meteoswiss-analysis/tree/main/figures"><span>Publication figures<small>PDF + 300 dpi PNG</small></span></a><a href="https://github.com/p3jitnath/meteoswiss-analysis/blob/main/docs/methodology.md"><span>Full methodology<small>Assumptions and differences</small></span></a></div></section>
+        <section className="citation" data-reveal><p className="section-label">Reference</p><p>Schär, C. et al. (2004). The role of increasing temperature variability in European summer heatwaves. <em>Nature</em> 427, 332–336. <a href="https://doi.org/10.1038/nature02300">doi:10.1038/nature02300</a>.</p></section>
       </main>
       <footer><span>Data retrieved {season.summary.as_of} · Source: MeteoSwiss · Code licensed under MIT</span><span className="footer-links"><a href="https://github.com/p3jitnath/meteoswiss-analysis/blob/main/LICENSE">MIT licence</a><a className="footer-code" href="https://github.com/p3jitnath/meteoswiss-analysis"><GitHubMark /> Source code</a></span></footer>
     </>
