@@ -22,7 +22,8 @@ characters. Press `G` outside a text field to toggle the exact production grid o
 
 - Family: Arial with Helvetica Neue and system sans-serif fallbacks.
 - Weights: regular and bold only.
-- Semantic type tokens: 16/13 px identity title/detail, 14 px metadata, 16 px section
+- Semantic type tokens: 16/13 px identity title/detail, 15 px primary navigation,
+  14 px metadata, 16 px section
   kickers, 15 px metric labels, 14 px metric details, 15 px controls, 19 px method
   subheads, 17/14 px download title/detail text, and 13 px footer text. Phone tokens
   increase controls, metric context, methods, and downloads while retaining a compact
