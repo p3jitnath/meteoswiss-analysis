@@ -25,9 +25,10 @@ characters. Press `G` outside a text field to toggle the exact production grid o
 - Semantic type tokens: 16/13 px identity title/detail, 15 px primary navigation,
   14 px metadata, 16 px section
   kickers, 15 px metric labels, 14 px metric details, 15 px controls, 19 px method
-  subheads, 17/14 px download title/detail text, and 13 px footer text. Phone tokens
+  subheads, 17/14 px download title/detail text, and 13 px footer text. Locator labels
+  use 20/15 px country/city roles, increasing to 22/19 px on phones. Phone tokens also
   increase controls, metric context, methods, and downloads while retaining a compact
-  13 px three-row footer.
+  13 px three-row footer. Annual selections use 18 px year and 15 px rank roles.
 - Display scale: 16 px body, 20–24 px lead, 36–92 px headings, and 64–106 px
   tabular headline statistics.
 - Paper: `#f4f3ef`; ink: `#111111`; muted: `#62615d`; rule: `#c9c7c0`.
