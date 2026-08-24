@@ -75,16 +75,26 @@ function Distribution({ records }: { records: Record[] }) {
   const shape = area<[number, number]>().x((point) => x(point[0])).y0(y(0)).y1((point) => y(point[1])).curve(curveBasis);
   const stroke = line<[number, number]>().x((point) => x(point[0])).y((point) => y(point[1])).curve(curveBasis);
   const ticks = x.ticks(7);
+  const latestYear = max(records, (record) => record.year) ?? 2026;
+  const referenceYears = [1947, 2003, 2015, 2018, 2022, 2023, latestYear];
+  const references = referenceYears
+    .filter((year, index) => referenceYears.indexOf(year) === index)
+    .map((year) => records.find((record) => record.year === year))
+    .filter((record): record is Record => Boolean(record));
   return (
-    <svg className="chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Temperature anomaly distributions before and after 1991">
-      <line className="zero" x1={x(0)} x2={x(0)} y1={margin.top} y2={height - margin.bottom} />
-      <path d={shape(first) ?? ""} fill={BLUE} opacity="0.16" />
-      <path d={shape(second) ?? ""} fill={RED} opacity="0.17" />
-      <path d={stroke(first) ?? ""} fill="none" stroke={BLUE} strokeWidth="3" />
-      <path d={stroke(second) ?? ""} fill="none" stroke={RED} strokeWidth="3" />
-      {ticks.map((tick) => <g key={tick}><line className="tick" x1={x(tick)} x2={x(tick)} y1={height - margin.bottom} y2={height - margin.bottom + 6} /><text x={x(tick)} y={height - 19} textAnchor="middle">{tick}</text></g>)}
-      <text x={width / 2} y={height - 1} textAnchor="middle" className="axis-label">Anomaly relative to 1961–1990 (°C)</text>
-    </svg>
+    <div className="distribution-wrap">
+      <svg className="chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Temperature anomaly distributions before and after 1991, with seven reference years">
+        <line className="zero" x1={x(0)} x2={x(0)} y1={margin.top} y2={height - margin.bottom} />
+        <path d={shape(first) ?? ""} fill={BLUE} opacity="0.16" />
+        <path d={shape(second) ?? ""} fill={RED} opacity="0.17" />
+        {references.map((record, index) => { const markerY = margin.top + 9 + (index % 3) * 19; return <g key={record.year} className={record.complete ? "year-reference" : "year-reference provisional-reference"}><line x1={x(record.anomaly_c)} x2={x(record.anomaly_c)} y1={markerY + 8} y2={height - margin.bottom} /><circle cx={x(record.anomaly_c)} cy={markerY} r="8" /><text x={x(record.anomaly_c)} y={markerY + 3.5} textAnchor="middle">{index + 1}</text></g>; })}
+        <path d={stroke(first) ?? ""} fill="none" stroke={BLUE} strokeWidth="3" />
+        <path d={stroke(second) ?? ""} fill="none" stroke={RED} strokeWidth="3" />
+        {ticks.map((tick) => <g key={tick}><line className="tick" x1={x(tick)} x2={x(tick)} y1={height - margin.bottom} y2={height - margin.bottom + 6} /><text x={x(tick)} y={height - 19} textAnchor="middle">{tick}</text></g>)}
+        <text x={width / 2} y={height - 1} textAnchor="middle" className="axis-label">Anomaly relative to 1961–1990 (°C)</text>
+      </svg>
+      <ol className="reference-years" aria-label="Reference years plotted as vertical lines">{references.map((record) => <li key={record.year}><span>{record.year}{record.complete ? "" : " to date"}</span><b>{signed(record.anomaly_c)}</b></li>)}</ol>
+    </div>
   );
 }
 
