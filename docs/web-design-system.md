@@ -32,14 +32,16 @@ characters. Press `G` outside a text field to toggle the exact production grid o
 The report is flush-left and asymmetrical. Rules divide semantic units. Geometric blocks label
 sections or encode values; none are decorative. Sections reveal once with a short fade and
 8 px rise. Content is visible by default, immediately visible with reduced motion, and never
-removed from document flow.
+removed from document flow. Key statistics count up once when the selected season changes; the
+animation resolves immediately for people who request reduced motion.
 
 ## Responsive behaviour
 
 Desktop relationships recompose to six columns on tablets and four columns on phones. On phones,
 metadata precedes the title, findings become a single sequence, captions precede charts, and the
 timeline is horizontally scrollable inside a labelled figure rather than widening the page.
-Navigation retains the report identity and Code action. All controls meet a 44 px touch target.
+Navigation retains the report identity and Code action. A native year selector makes annual data
+fully usable without hover on touch devices. All controls meet a 44 px touch target.
 
 ## Accessibility and provenance
 
