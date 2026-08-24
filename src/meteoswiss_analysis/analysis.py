@@ -32,7 +32,7 @@ class SeasonRecord:
     year
         Calendar year.
     temperature_c
-        Four-station mean 2 m air temperature in degrees Celsius.
+        Four-station mean 2m air temperature in degrees Celsius.
     anomaly_c
         Difference from the 1961–1990 seasonal mean in degrees Celsius.
     period

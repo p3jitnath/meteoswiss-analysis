@@ -4,7 +4,7 @@
 [![Deploy](https://github.com/p3jitnath/meteoswiss-analysis/actions/workflows/pages.yml/badge.svg)](https://github.com/p3jitnath/meteoswiss-analysis/actions/workflows/pages.yml)
 
 A reproducible update of Christoph Schär's visual comparison of historical and recent
-Swiss warm-season temperatures. The project uses homogeneous MeteoSwiss 2 m air-temperature
+Swiss warm-season temperatures. The project uses homogeneous MeteoSwiss 2m air-temperature
 series from Basel/Binningen, Bern, Geneva and Zürich, recreates the distribution comparison,
 and adds an explicit summer-to-date view when the current JJA season is incomplete.
 
