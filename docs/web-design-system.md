@@ -22,7 +22,8 @@ characters. Press `G` outside a text field to toggle the exact production grid o
 
 - Family: Arial with Helvetica Neue and system sans-serif fallbacks.
 - Weights: regular and bold only.
-- Scale: 12 px functional labels, 16 px body, 20–24 px lead, 36–80 px display.
+- Scale: 12–16 px functional labels, 16 px body, 20–24 px lead, 36–92 px display,
+  with 76–128 px tabular headline statistics.
 - Paper: `#f4f3ef`; ink: `#111111`; muted: `#62615d`; rule: `#c9c7c0`.
 - Accent: `#e1261c`, used for active state, sequence and the principal finding only.
 - Scientific series retain blue/red because colour communicates the two comparison periods.
