@@ -33,3 +33,94 @@ footer{margin-top:0;padding:calc(var(--baseline)*4) var(--margin);border-top:8px
 .selection b{font-size:var(--type-selection-year);line-height:1.2}.selection small{font-size:var(--type-selection-rank);line-height:1.35}html[data-reveal="enabled"] .abstract:not(.is-revealed) .map-city{opacity:0}.abstract.is-revealed .map-city{opacity:0;transform-box:fill-box;transform-origin:center;animation:city-pop .42s cubic-bezier(.2,.8,.2,1) forwards}.abstract.is-revealed .map-city:nth-of-type(1){animation-delay:.08s}.abstract.is-revealed .map-city:nth-of-type(2){animation-delay:.2s}.abstract.is-revealed .map-city:nth-of-type(3){animation-delay:.32s}.abstract.is-revealed .map-city:nth-of-type(4){animation-delay:.44s}@keyframes city-pop{from{opacity:0;transform:translateY(6px) scale(.94)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){html[data-reveal="enabled"] .abstract .map-city{opacity:1;animation:none;transform:none}}
 
 @font-face{font-family:"Inter";src:url("../fonts/InterVariable.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}:root{--font-sans:Helvetica,Arial,"Inter",sans-serif;font-family:var(--font-sans)}body,button,input,select,svg text{font-family:var(--font-sans)}
+
+/* Keep scientific values intact and use code-native directional controls. */
+.metrics strong,
+.metrics strong > span {
+  white-space: nowrap;
+}
+
+.metrics strong {
+  color: var(--accent);
+}
+
+.year-step button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.year-step button:last-child {
+  justify-content: flex-end;
+}
+
+.year-step-mark {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+@media (min-width: 640px) and (max-width: 1100px) {
+  .metrics strong {
+    font-size: clamp(48px, 5.8vw, 64px);
+  }
+}
+
+/* Figure motion communicates chronology and comparison order. */
+html[data-reveal="enabled"] .panel:not(.is-revealed) .distribution-area,
+html[data-reveal="enabled"] .panel:not(.is-revealed) .distribution-line,
+html[data-reveal="enabled"] .timeline-panel:not(.is-revealed) .bar {
+  opacity: 0;
+}
+
+.panel.is-revealed .distribution-area {
+  animation: distribution-area-in 700ms ease-out both;
+}
+
+.panel.is-revealed .distribution-area-recent {
+  animation-delay: 180ms;
+}
+
+.panel.is-revealed .distribution-line {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: distribution-line-in 900ms cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.panel.is-revealed .distribution-line-recent {
+  animation-delay: 180ms;
+}
+
+.timeline-panel.is-revealed .bar {
+  animation: annual-bar-in 260ms ease-out both;
+  animation-delay: calc(var(--bar-index) * 12ms);
+}
+
+@keyframes distribution-area-in {
+  from { opacity: 0; }
+}
+
+@keyframes distribution-line-in {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes annual-bar-in {
+  from { opacity: 0; transform: translateY(5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-reveal="enabled"] .panel .distribution-area,
+  html[data-reveal="enabled"] .panel .distribution-line,
+  html[data-reveal="enabled"] .timeline-panel .bar {
+    animation: none;
+    opacity: revert;
+    transform: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+}

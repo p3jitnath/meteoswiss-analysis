@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import type { CSSProperties } from "react";
 import { extent, max, mean } from "d3-array";
 import { scaleLinear } from "d3-scale";
 import { area, curveBasis, line } from "d3-shape";
@@ -46,6 +47,12 @@ function ArrowMark() {
   return <svg className="arrow-mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8" /></svg>;
 }
 
+/** Render a font-independent directional chevron for adjacent-year controls. */
+function YearStepMark({ direction }: { direction: "previous" | "next" }) {
+  const path = direction === "previous" ? "M13 4 7 10l6 6" : "m7 4 6 6-6 6";
+  return <svg className="year-step-mark" viewBox="0 0 20 20" aria-hidden="true"><path d={path} /></svg>;
+}
+
 /** Format a signed anomaly with a typographic sign. */
 function signed(value: number): string {
   return `${value >= 0 ? "+" : "−"}${Math.abs(value).toFixed(2)} °C`;
@@ -74,7 +81,7 @@ function CountUp({ value, decimals = 0, prefix = "", suffix = "" }: { value: num
 function YearScrubber({ records, selected, onSelect }: { records: Record[]; selected: Record | null; onSelect: (record: Record) => void }) {
   const index = Math.max(0, records.findIndex((record) => record.year === selected?.year));
   const choose = (nextIndex: number) => onSelect(records[Math.max(0, Math.min(nextIndex, records.length - 1))]);
-  return <div className="year-scrubber" aria-label="Choose a year"><div className="year-scrubber-head"><span>Selected year</span><output>{records[index].year}</output></div><input type="range" min="0" max={records.length - 1} step="1" value={index} aria-label="Year" aria-valuetext={`${records[index].year}, ${signed(records[index].anomaly_c)}`} onChange={(event) => choose(Number(event.target.value))} /><div className="year-step"><button type="button" onClick={() => choose(index - 1)} disabled={index === 0}>Previous year</button><strong>{signed(records[index].anomaly_c)}</strong><button type="button" onClick={() => choose(index + 1)} disabled={index === records.length - 1}>Next year</button></div></div>;
+  return <div className="year-scrubber" aria-label="Choose a year"><div className="year-scrubber-head"><span>Selected year</span><output>{records[index].year}</output></div><input type="range" min="0" max={records.length - 1} step="1" value={index} aria-label="Year" aria-valuetext={`${records[index].year}, ${signed(records[index].anomaly_c)}`} onChange={(event) => choose(Number(event.target.value))} /><div className="year-step"><button type="button" onClick={() => choose(index - 1)} disabled={index === 0}><YearStepMark direction="previous" /><span>Previous year</span></button><strong>{signed(records[index].anomaly_c)}</strong><button type="button" onClick={() => choose(index + 1)} disabled={index === records.length - 1}><span>Next year</span><YearStepMark direction="next" /></button></div></div>;
 }
 
 /** Render the four-station Swiss composite as an objective locator map. */
@@ -117,10 +124,10 @@ function Distribution({ records }: { records: Record[] }) {
   return (
       <svg className="chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Temperature anomaly distributions before and after 1991">
         <line className="zero" x1={x(0)} x2={x(0)} y1={margin.top} y2={height - margin.bottom} />
-        <path d={shape(first) ?? ""} fill={BLUE} opacity="0.16" />
-        <path d={shape(second) ?? ""} fill={RED} opacity="0.17" />
-        <path d={stroke(first) ?? ""} fill="none" stroke={BLUE} strokeWidth="3" />
-        <path d={stroke(second) ?? ""} fill="none" stroke={RED} strokeWidth="3" />
+        <path className="distribution-area distribution-area-historical" d={shape(first) ?? ""} fill={BLUE} opacity="0.16" />
+        <path className="distribution-area distribution-area-recent" d={shape(second) ?? ""} fill={RED} opacity="0.17" />
+        <path className="distribution-line distribution-line-historical" pathLength="1" d={stroke(first) ?? ""} fill="none" stroke={BLUE} strokeWidth="3" />
+        <path className="distribution-line distribution-line-recent" pathLength="1" d={stroke(second) ?? ""} fill="none" stroke={RED} strokeWidth="3" />
         {ticks.map((tick) => <g key={tick}><line className="tick" x1={x(tick)} x2={x(tick)} y1={height - margin.bottom} y2={height - margin.bottom + 6} /><text x={x(tick)} y={height - 19} textAnchor="middle">{tick}</text></g>)}
         <text x={width / 2} y={height - 1} textAnchor="middle" className="axis-label">Anomaly relative to 1961–1990 (°C)</text>
       </svg>
@@ -139,10 +146,10 @@ function Timeline({ records, onSelect }: { records: Record[]; onSelect: (record:
   return (
     <svg className="chart timeline" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Annual Swiss seasonal temperature anomalies since 1864">
       <line className="zero" x1={margin.left} x2={width - margin.right} y1={y(0)} y2={y(0)} />
-      {records.map((record) => {
+      {records.map((record, index) => {
         const colour = record.complete ? (record.year <= 1990 ? BLUE : RED) : PURPLE;
         const top = record.anomaly_c >= 0 ? y(record.anomaly_c) : y(0);
-        return <rect key={record.year} className="bar" x={x(record.year) - barWidth / 2} y={top} width={barWidth} height={Math.max(2, Math.abs(y(record.anomaly_c) - y(0)))} fill={colour} opacity={record.complete ? 0.88 : 0.58} stroke={record.complete ? "none" : PURPLE} strokeDasharray={record.complete ? undefined : "3 2"} tabIndex={0} onClick={() => onSelect(record)} onMouseEnter={() => onSelect(record)} onFocus={() => onSelect(record)}><title>{record.year}: {signed(record.anomaly_c)}</title></rect>;
+        return <rect key={record.year} className="bar" style={{ "--bar-index": index } as CSSProperties} x={x(record.year) - barWidth / 2} y={top} width={barWidth} height={Math.max(2, Math.abs(y(record.anomaly_c) - y(0)))} fill={colour} opacity={record.complete ? 0.88 : 0.58} stroke={record.complete ? "none" : PURPLE} strokeDasharray={record.complete ? undefined : "3 2"} tabIndex={0} onClick={() => onSelect(record)} onMouseEnter={() => onSelect(record)} onFocus={() => onSelect(record)}><title>{record.year}: {signed(record.anomaly_c)}</title></rect>;
       })}
       {[1864, 1900, 1950, 1990, 2026].map((tick) => <text key={tick} x={x(tick)} y={height - 18} textAnchor="middle">{tick}</text>)}
     </svg>
@@ -197,17 +204,17 @@ export default function App() {
         <section className="abstract" data-reveal><p className="section-label">Abstract</p><p>We update the observational analysis of Schär et al. (2004) using homogeneous temperature records from Basel, Bern, Geneva and Zürich. Complete June–August seasons from 1991–{payload.seasons.jja.summary.recent_period_end} average <strong>{payload.seasons.jja.summary.mean_shift_c.toFixed(2)} °C warmer</strong> than the 1864–1990 record. The interactive results distinguish completed seasons from an explicitly provisional 2026 season-to-date value.</p><SwitzerlandMap /></section>
         <section className="controls" aria-label="Season selection" data-reveal><button className={seasonKey === "jja" ? "active" : ""} onClick={() => { setSeasonKey("jja"); setSelected(null); }}>Meteorological summer · JJA</button><button className={seasonKey === "apr_sep" ? "active" : ""} onClick={() => { setSeasonKey("apr_sep"); setSelected(null); }}>Warm half-year · Apr–Sep</button></section>
         <section className="metrics" id="findings" data-reveal>
-          <article><span>Mean shift</span><strong><CountUp value={season.summary.mean_shift_c} decimals={2} prefix="+" suffix="°" /></strong><small>1991–{season.summary.recent_period_end} vs 1864–1990</small></article>
+          <article><span>Mean shift</span><strong><CountUp value={season.summary.mean_shift_c} decimals={2} prefix="+" suffix=" °C" /></strong><small>1991–{season.summary.recent_period_end} vs 1864–1990</small></article>
           <article><span>Warmest complete season</span><strong><CountUp value={season.summary.warmest_year} /></strong><small>{signed(season.summary.warmest_anomaly_c)}</small></article>
           <article><span>Current view</span><strong>{partial ? <CountUp value={Math.abs(partial.anomaly_c)} decimals={2} prefix={partial.anomaly_c >= 0 ? "+" : "−"} suffix=" °C" /> : "Complete"}</strong><small>{partial ? `${partial.days_observed} of ${partial.days_expected} days · provisional` : `through ${season.summary.recent_period_end}`}</small></article>
         </section>
-        <figure className="panel split" data-reveal><figcaption><p className="figure-number">01 / Distribution</p><h2>The complete distribution has shifted towards warmer summers</h2><p>Kernel-density estimates include completed seasons only. The vertical reference denotes the 1961–1990 mean. Curves describe observed variability and do not represent forecasts.</p><div className="legend"><span><i className="blue" />1864–1990</span><span><i className="red" />1991–{season.summary.recent_period_end}</span></div></figcaption><Distribution records={season.records} /></figure>
-        <figure className="panel timeline-panel" id="annual" data-reveal><div className="section-head"><figcaption><p className="figure-number">02 / Annual record</p><h2>Annual {season.summary.season_label} temperature anomalies</h2></figcaption><div className="selection" aria-live="polite"><b>{displayed?.year}</b><strong>{displayed && signed(displayed.anomaly_c)}</strong><small>{displayed?.complete ? `#${displayed.rank}` : `${displayed?.days_observed}/${displayed?.days_expected} days, provisional`}</small></div></div><YearScrubber records={season.records} selected={displayed} onSelect={setSelected} /><div className="timeline-scroll"><Timeline records={season.records} onSelect={setSelected} /></div><p className="hint"><span className="hint-wide">Interactive: scrub through years, or hover, tap or focus a bar. The outlined final bar is a like-for-like season-to-date anomaly and is not an estimate of the final summer mean.</span><span className="hint-phone">Drag the year control, or tap a bar. The outlined final bar is provisional.</span></p></figure>
+        <figure className="panel split" data-reveal><figcaption><p className="figure-number">01 / Distribution</p><h2>The complete distribution has shifted towards warmer summers</h2><p>Kernel-density estimates include completed seasons only. The vertical reference denotes the 1961–1990 mean. Curves describe observed variability and do not represent forecasts.</p><div className="legend"><span><i className="blue" />1864–1990</span><span><i className="red" />1991–{season.summary.recent_period_end}</span></div></figcaption><Distribution key={seasonKey} records={season.records} /></figure>
+        <figure className="panel timeline-panel" id="annual" data-reveal><div className="section-head"><figcaption><p className="figure-number">02 / Annual record</p><h2>Annual {season.summary.season_label} temperature anomalies</h2></figcaption><div className="selection" aria-live="polite"><b>{displayed?.year}</b><strong>{displayed && signed(displayed.anomaly_c)}</strong><small>{displayed?.complete ? `#${displayed.rank}` : `${displayed?.days_observed}/${displayed?.days_expected} days, provisional`}</small></div></div><YearScrubber records={season.records} selected={displayed} onSelect={setSelected} /><div className="timeline-scroll"><Timeline key={seasonKey} records={season.records} onSelect={setSelected} /></div><p className="hint"><span className="hint-wide">Interactive: scrub through years, or hover, tap or focus a bar. The outlined final bar is a like-for-like season-to-date anomaly and is not an estimate of the final summer mean.</span><span className="hint-phone">Drag the year control, or tap a bar. The outlined final bar is provisional.</span></p></figure>
         <section className="method" id="methods" data-reveal><p className="section-label">03 / Methods</p><h2>Reproducible station-based analysis</h2><div className="method-grid"><div><b>Observations</b><p>Homogeneous monthly mean 2m air temperature from Basel/Binningen, Bern/Zollikofen, Geneva/Cointrin and Zürich/Fluntern.</p></div><div><b>Aggregation</b><p>Stations receive equal weight. Monthly station composites are weighted by calendar days to obtain seasonal means.</p></div><div><b>Reference and provisional data</b><p>Completed anomalies use 1961–1990. The incomplete season uses daily values and the matching baseline calendar window; it is excluded from ranks and densities.</p></div></div></section>
         <section className="data-section" id="data" data-reveal><div><p className="section-label">04 / Data and reproducibility</p><h2>Every result is inspectable.</h2><p>Source data, processed tables, figure-generation code and the complete web application are versioned together. Automated tests verify seasonal weighting and incomplete-season handling.</p></div><div className="download-list"><a href="./data/analysis.json" download><span>Analysis dataset<small>JSON · machine readable</small></span><ArrowMark /></a><a href="https://github.com/p3jitnath/meteoswiss-analysis/tree/main/figures" target="_blank" rel="noreferrer"><span>Publication figures<small>PDF + 300 dpi PNG</small></span><ArrowMark /></a><a href="https://github.com/p3jitnath/meteoswiss-analysis/blob/main/docs/methodology.md" target="_blank" rel="noreferrer"><span>Full methodology<small>Assumptions and differences</small></span><ArrowMark /></a></div></section>
         <section className="citation" data-reveal><p className="section-label">Reference</p><p>Schär, C. et al. (2004). The role of increasing temperature variability in European summer heatwaves. <em>Nature</em> 427, 332–336. <a href="https://doi.org/10.1038/nature02300" target="_blank" rel="noreferrer">doi:10.1038/nature02300</a>.</p></section>
       </main>
-      <footer><span className="footer-meta"><span>Data retrieved {season.summary.as_of}</span><span>Source: <a href="https://www.meteoswiss.admin.ch/" target="_blank" rel="noreferrer">MeteoSwiss</a></span><span className="license-note">Code licensed under MIT</span></span><span className="footer-links"><a href="https://github.com/p3jitnath/meteoswiss-analysis/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT licence</a><a className="footer-code" href="https://github.com/p3jitnath/meteoswiss-analysis" target="_blank" rel="noreferrer"><GitHubMark /> Source code</a></span></footer>
+      <footer><span className="footer-meta"><span>Data retrieved: {season.summary.as_of}</span><span>Source: <a href="https://www.meteoswiss.admin.ch/" target="_blank" rel="noreferrer">MeteoSwiss</a></span><span className="license-note">Code licensed under MIT</span></span><span className="footer-links"><a href="https://github.com/p3jitnath/meteoswiss-analysis/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT licence</a><a className="footer-code" href="https://github.com/p3jitnath/meteoswiss-analysis" target="_blank" rel="noreferrer"><GitHubMark /> Source code</a></span></footer>
     </>
   );
 }
