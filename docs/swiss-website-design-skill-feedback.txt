@@ -1,0 +1,130 @@
+Feedback for the Swiss Website Design Skill
+===========================================
+
+These points come from iterating on a responsive scientific research report with
+interactive Matplotlib-derived figures, a React/Vite frontend, GitHub Pages
+deployment, a Swiss locator map, and Open Graph artwork.
+
+1. Require semantic typography tokens before visual tuning. Navigation, metadata,
+   section labels, metrics, controls, figure annotations, map labels, body copy,
+   and footer text should each have a named role. Repeated requests to enlarge text
+   should update a role or scale, not accumulate selector-specific overrides.
+
+2. Include a consolidation checkpoint after several design revisions. Long feedback
+   sessions tend to produce duplicate media queries and late CSS overrides unless the
+   workflow explicitly calls for merging values into one authoritative token system.
+
+3. Treat tablets as a distinct composition. Testing only desktop and phone misses
+   iPad-width failures such as scientific units wrapping away from large metric values.
+   Include representative 768 px, 834 px, 1024 px, and 1366 px tablet states.
+
+4. Test named devices in both CSS pixels and realistic device-pixel ratios. At minimum,
+   include iPhone 15 Pro portrait, a short phone landscape viewport, iPad Pro portrait,
+   and a conventional desktop viewport when those devices are in scope.
+
+5. Make value-plus-unit strings indivisible. Large scientific metrics such as
+   “+5.64 °C” should use a non-wrapping value group while the surrounding grid and
+   responsive type scale ensure the group still fits without clipping or overflow.
+
+6. Preserve typographic spacing inside measurements. The degree symbol, unit, sign,
+   and decimal value should follow one project-wide formatter so “2m”, “2 m”, “°C”,
+   and signed anomalies are not altered inconsistently across prose, plots, and cards.
+
+7. Validate large bold numerals for glyph collisions. Negative tracking and heavy
+   weights can make adjacent digits appear to touch on iOS even when their boxes do
+   not overlap. Prefer natural tracking and inspect actual device screenshots.
+
+8. Define accent colour semantically. If red identifies primary findings, apply it
+   through a shared metric-value role rather than exceptions for individual cards.
+   Keep chart-series colours separate from interface and identity colour roles.
+
+9. Use code-native SVG for all functional arrows and identity marks. Font arrows and
+   emoji render unpredictably across iOS, Linux, and social-preview rasterizers.
+   SVG controls should inherit semantic colour, expose adequate touch targets, and
+   retain accessible text or labels.
+
+10. Design touch interaction independently of hover. Time-series exploration should
+    provide a range input, visible selected year, previous/next controls, keyboard
+    operation, and synchronized accessible value text.
+
+11. Treat phone footers as explicit semantic rows. Specify the exact row count,
+    centring, line-breaking policy, and safe-area padding. Do not rely on flex wrapping
+    to produce a stable footer on narrow screens.
+
+12. Audit horizontally scrollable figures for orphaned labels. An axis title centred
+    in a wide SVG can appear detached at the edge of a phone viewport. Position it
+    relative to the visible viewport or omit it when the context already supplies it.
+
+13. Give data animation a communicative purpose. Annual bars can reveal in chronological
+    order, while comparative distributions can draw in a defined series order. Avoid
+    motion that merely decorates the page or obscures immediate interpretation.
+
+14. Restart data-dependent animation when a user changes the selected dataset or season,
+    but do not replay ordinary reveal-on-scroll motion. Remount or explicitly reset only
+    the affected figure, leaving unrelated page content stable.
+
+15. Start figure animation when the figure enters the viewport, not at initial page load.
+    Otherwise below-the-fold animation may finish before the reader sees it. Ensure
+    content is visible without JavaScript and immediate under reduced-motion settings.
+
+16. Validate SVG animation states, not just screenshots. Assert that the first and last
+    chronological marks receive ordered delays, dataset changes restart the intended
+    animations, and reduced motion removes hidden, transformed, or dashed interim states.
+
+17. Use authoritative geographic vectors and record provenance. Simplify topology only
+    as much as necessary, retain enough resolution at the largest render size, and verify
+    that station coordinates still align after viewBox and responsive transformations.
+
+18. Review map labels visually at every breakpoint. Collision checks alone do not catch
+    labels that overlap an outline or leader lines that feel ambiguous. Keep city labels
+    outside the boundary and use consistent slanted-plus-horizontal elbow geometry.
+
+19. Make sequential map-label animation resilient. Labels must remain visible if scripts
+    load slowly, reveal immediately with reduced motion, and never become stranded when a
+    reader scrolls rapidly past the observer threshold.
+
+20. Distinguish a declared font stack from an identical rendered font. Family names do
+    not guarantee matching glyphs across Linux, iOS, and social-card rasterization.
+    Verify the computed family and actual permitted font resource in production.
+
+21. Add a font-licensing decision gate. Do not redistribute proprietary Helvetica or
+    Arial files. If a bundled fallback such as Inter is used, include its licence and
+    preserve the requested system-font ordering.
+
+22. Verify font delivery through the production topology. Test the built font URL, MIME
+    type, response status, computed family, fallback order, and GitHub Pages subdirectory
+    path. A successful local CSS parse does not prove that the webfont is reachable.
+
+23. Require a rendered 1200 × 630 Open Graph preview and explicit approval before commit.
+    Inspect the raster rather than the SVG source for fallback fonts, clipping,
+    antialiasing, map detail, flag geometry, and perceived balance.
+
+24. Treat social-preview identity scale relationally. Compare the flag against the
+    adjacent country name, report title, map, and whitespace. A geometrically valid mark
+    can still dominate the card through perceived area.
+
+25. Add geometric assertions for generated identity marks. For a Swiss flag, verify that
+    the cross and red square share the same centre and retain the official proportions;
+    do not rely solely on inspection at full-card scale.
+
+26. Encourage social cards to carry meaningful report context. When appropriate, include
+    the same authoritative map, station markers, restrained palette, and hierarchy as the
+    site instead of producing a generic logo-and-title thumbnail.
+
+27. Document social-cache behaviour. Messaging applications cache Open Graph images
+    aggressively. After an approved change, update a query version on the absolute image
+    URL and confirm that it returns the new raster and correct MIME type. Query versions
+    should not create duplicate preview files in the repository.
+
+28. Separate source validation from browser validation. Linting, type checking, tests,
+    and a successful build do not prove layout quality. Require viewport screenshots plus
+    browser assertions for overflow, line count, touch-target size, computed fonts,
+    reduced-motion visibility, console errors, and asset responses.
+
+29. Provide a documented fallback when the preferred browser runtime cannot launch in a
+    CI or HPC environment. The workflow should report the limitation precisely and defer
+    visual approval rather than presenting source inspection as a completed device check.
+
+30. Make deployment verification part of completion. After pushing, wait for Pages CI,
+    inspect the live response and asset paths, then rerun the critical desktop, iPad Pro,
+    and iPhone viewport checks against the deployed site.
