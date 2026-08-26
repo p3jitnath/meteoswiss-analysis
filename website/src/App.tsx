@@ -53,6 +53,11 @@ function YearStepMark({ direction }: { direction: "previous" | "next" }) {
   return <svg className="year-step-mark" viewBox="0 0 20 20" aria-hidden="true"><path d={path} /></svg>;
 }
 
+/** Render the authoritative Swiss boundary as a compact header identity mark. */
+function SwitzerlandOutlineMark() {
+  return <svg className="identity-outline" viewBox="0 0 600 430" aria-hidden="true"><path d={SWITZERLAND_OUTLINE} /></svg>;
+}
+
 /** Format a signed anomaly with a typographic sign. */
 function signed(value: number): string {
   return `${value >= 0 ? "+" : "−"}${Math.abs(value).toFixed(2)} °C`;
@@ -195,7 +200,7 @@ export default function App() {
     <>
       <div className="grid-overlay" aria-hidden="true" />
       <header className="site-header">
-        <nav className="topbar"><a className="identity" href="#top" aria-label="Swiss Climate Analysis home"><span className="identity-mark"><span className="identity-flag" role="img" aria-label="Swiss flag" />Swiss Climate</span><span className="identity-unit"><b>Temperature analysis</b><small>Open research report</small></span></a><div className="nav-links"><a href="#findings">Findings</a><a href="#methods">Methods</a><a href="#data">Data</a><a className="code-link" href="https://github.com/p3jitnath/meteoswiss-analysis" target="_blank" rel="noreferrer" aria-label="View source code on GitHub in a new tab"><GitHubMark /><span>Code</span></a></div></nav>
+        <nav className="topbar"><a className="identity" href="#top" aria-label="Climate Analysis home"><span className="identity-mark"><SwitzerlandOutlineMark />Climate</span><span className="identity-unit"><b>Temperature analysis</b><small>Open research report</small></span></a><div className="nav-links"><a href="#findings">Findings</a><a href="#methods">Methods</a><a href="#data">Data</a><a className="code-link" href="https://github.com/p3jitnath/meteoswiss-analysis" target="_blank" rel="noreferrer" aria-label="View source code on GitHub in a new tab"><GitHubMark /><span>Code</span></a></div></nav>
       </header>
       <header className="report-header" id="top" data-reveal>
         <div className="report-meta"><span>Research brief</span><span>24 August 2026</span><span>Version 1.0</span></div><p className="eyebrow">Observed climate change · Switzerland</p><h1>The shifting distribution of Swiss summer temperatures since 1864</h1><p className="dek">An updated four-station analysis of homogeneous 2m air temperature records shows that recent Swiss summers occupy a substantially warmer climate regime.</p><div className="byline"><span>Analysis by <a href="https://p3jitnath.github.io/" target="_blank" rel="noreferrer">Pritthijit Nath</a></span><span>Data: Federal Office of Meteorology and Climatology <a href="https://www.meteoswiss.admin.ch/" target="_blank" rel="noreferrer">MeteoSwiss</a></span></div>

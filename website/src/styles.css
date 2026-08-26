@@ -124,3 +124,36 @@ html[data-reveal="enabled"] .timeline-panel:not(.is-revealed) .bar {
     stroke-dashoffset: 0;
   }
 }
+
+/* The report identity uses the same authoritative boundary as the locator map. */
+.identity-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.identity-outline {
+  width: 38px;
+  height: auto;
+  flex: 0 0 38px;
+  overflow: visible;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.identity-outline path {
+  vector-effect: non-scaling-stroke;
+}
+
+@media (max-width: 639px) {
+  .identity-mark {
+    gap: 8px;
+  }
+
+  .identity-outline {
+    width: 32px;
+    flex-basis: 32px;
+  }
+}
