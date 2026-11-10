@@ -3,7 +3,7 @@ name: Deploy Pages
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 5 * * 1"
+    - cron: "18 5 * * 1"
   push:
     branches: [main]
     paths:
